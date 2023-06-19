@@ -14,8 +14,9 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(set_params)
+    @user = current_user
     @pet.user = @user
-    if @pet.save
+    if @pet.save!
       redirect_to pet_path(@pet)
     else
       render :new, status: :unprocessable_entity
