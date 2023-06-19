@@ -11,9 +11,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
+
     <%= yield %>
 
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
