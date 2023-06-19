@@ -8,7 +8,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px; /* Taille personnalisée */
+  height: auto;
 }
 
 .avatar {
@@ -33,4 +34,37 @@
   border-radius: 0px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0; /* Couleur de fond gris clair */
+  color: #333; /* Couleur du texte */
+  /* Ajoutez d'autres styles de survol si nécessaire */
+  border-radius: 5%;
+}
+
+.dropdown-menu {
+  background-color: #fff; /* Fond blanc */
+}
+
+.rounded-dropdown {
+  border-radius: 10px; /* Valeur de rayon à ajuster selon vos préférences */
+}
+
+.dropdown-divider {
+  border-color: #ccc; /* Couleur de la barre de séparation */
+  /* Autres propriétés de style de la barre de séparation si nécessaire */
+}
+
+.logo-small {
+  width: 100px; /* Taille réduite du logo */
+  /* Autres styles pour le logo réduit */
+}
+
+button.btn.btn-outline-primary {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
