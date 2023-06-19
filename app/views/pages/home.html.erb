@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'shared/banner' %>
+<h1>Suggestions:</h1>
+
+<div id="suggestions">
+  <% @pets.each do |pet| %>
+    <%= render pet %>
+    <p>
+      <%= link_to "Louer cet animal", pet %>
+    </p>
+  <% end %>
+</div>

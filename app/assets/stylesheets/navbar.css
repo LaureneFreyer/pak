@@ -36,7 +36,7 @@
   border: white 1px solid;
 }
 
-.nav-link:hover {
+#usernav:hover {
   background-color: #f0f0f0; /* Couleur de fond gris clair */
   color: #333; /* Couleur du texte */
   /* Ajoutez d'autres styles de survol si nécessaire */
@@ -67,4 +67,17 @@ button.btn.btn-outline-primary {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.search-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+#navhover:hover {
+  margin: -5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
 }
