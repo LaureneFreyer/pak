@@ -1,6 +1,9 @@
 <h1>Mes réservations</h1>
 
 <% @reservations.each do |reservation| %>
+  <%= reservation.pet.name %>
   <%= reservation.start_date %>
   <%= reservation.end_date %>
+  <%= link_to 'Modifier ma réservation', edit_reservation_path(reservation) %>
+  <%= link_to "Annuler ma réservation", reservation_path(reservation), data: { turbo_method: :delete, turbo_confirm: 'Veux-tu vraiment annuler ta réservation? :('} %>
 <% end %>

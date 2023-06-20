@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :pets do
-    resources :reservations, only: [:create, :edit, :update, :index]
+    resources :reservations, only: [:create]
   end
+  resources :reservations, only: [:edit, :update, :index, :destroy]
 end
