@@ -1,13 +1,13 @@
 
-<div id="<%= dom_id pet %>">
+<div id="<%= dom_id @pet %>">
   <p>
     <strong>Name:</strong>
-    <%= pet.name %>
+    <%= @pet.name %>
   </p>
 
   <p>
     <strong>Address:</strong>
-    <%= pet.address %>
+    <%= @pet.address %>
   </p>
 
   <%# <p>
@@ -31,4 +31,3 @@
 <%= link_to 'Edit this pet', edit_pet_path %>
 <%= link_to 'Back to pets', pets_path %>
 <%# <%= link_to 'Delte this pet', pet_path() %>
-
