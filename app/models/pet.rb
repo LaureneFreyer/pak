@@ -1,7 +1,7 @@
 class Pet < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
   has_one_attached :photo
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
   validates :name, presence: true
   validates :address, presence: true
   validates :price, presence: true
