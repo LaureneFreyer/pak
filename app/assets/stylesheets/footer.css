@@ -1,15 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: calc(100% - 100px); /* Ajustez la hauteur du footer ici (100px est juste un exemple) */
+}
+
 footer {
+  position: bottom;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #f8f8f8;
   padding: 20px 0;
-  width: 100%;
-  margin-top: 20px;
-	display : table-row;
-	height: 100px; /* à titre d'exemple */
+  text-align: center;
 }
+
+
 
 footer .container2 {
   text-align: center;
-  max-width: 100%; /* Ajoutez cette ligne pour que le contenu du footer prenne toute la largeur */
+  max-width: 100%;
 }
 
 footer::after {
