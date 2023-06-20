@@ -8,18 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "navbar", "data-turbo-track": "reload", defer: true %>
 
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/banner' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= render "shared/flashes" %>
     <%= yield %>
 
     <%= render 'shared/footer' %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
   </body>
 </html>

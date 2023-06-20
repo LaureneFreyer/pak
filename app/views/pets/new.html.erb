@@ -1,3 +1,25 @@
+
+<div class="login-form-container">
+  <h2>Ajouter un animal de compagnie</h2>
+
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name, label: "Nom", required: true, autofocus: true, input_html: { class: 'form-control' } %>
+      <%= f.input :address, label: "Adresse", required: true, input_html: { class: 'form-control' } %>
+      <%= f.input :price, label: "Prix journalier (€)", required: true, input_html: { class: 'form-control' } %>
+      <%= f.input :content, label: "Description", required: true, input_html: { class: 'form-control' } %>
+      <%= f.input :photo, label: "Photo", input_html: { class: 'form-control' } %>
+      <%= f.input :species, label: "Espèce", collection: ['Chat', 'Chien', 'Souris', 'Loutre', 'Autres'], prompt: 'Sélectionner une espèce', input_html: { class: 'form-control' } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Ajouter l'animal", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
 <h1>Add a pet</h1>
 
 <%= simple_form_for (@pet) do |f|  %>
@@ -10,3 +32,4 @@
   <%= f.input :rating %>
   <%= f.submit 'Click to add' %>
 <% end %>
+
