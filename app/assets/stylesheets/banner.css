@@ -1,0 +1,79 @@
+
+
+main{
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-left: 2%;
+}
+
+.card-banner{
+  cursor: pointer;
+  transition: 0.3s;
+  perspective: 600px;
+  position: relative;
+  height: 400px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: transparent !important;
+}
+
+.banner-img{
+  transition: 0.3s;
+  user-select: none;
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: -20px 0px 20px rgba(0, 0, 0, 0.4);
+  transform: rotateY(40deg);
+}
+
+.card-banner:last-child{
+  margin-right: 100px;
+}
+
+.card-banner-banner:hover{
+  width: 250px;
+}
+
+.card-banner:hover>img{
+  transform: rotateY(20deg);
+  box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card-banner.selected{
+  width: 250px;
+  z-index: 5;
+  scale: 1.3;
+}
+
+.card-banner.selected>img{
+  transform: rotateY(0);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.blur{
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+
+.image-container {
+  position: relative;
+}
+
+.image-container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}

@@ -19,7 +19,7 @@
 
 
 
-          <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
+          <%# <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
 
       <ul class="navbar-nav" id="usernav">
         <% if user_signed_in? %>
@@ -28,9 +28,11 @@
             <div class="dropdown-menu dropdown-menu-end rounded-dropdown" aria-labelledby="navbarDropdown">
                 <p>Welcome <%= current_user.first_name %>!</p>
                 <%= link_to "Mon profil", edit_user_registration_path, class: "nav-link" %>
+                <%= link_to "Mes animaux", pets_path, class: "nav-link" %>
+                <%# <%= link_to "Mes réservations", reservations_path class: "nav-link" %>
                 <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete } %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Mettre mon animal sur PAC", new_pet_url, class: "dropdown-item text-center" %>
+              <%= link_to "Mettre mon animal sur PAK", new_pet_url, class: "dropdown-item text-center" %>
             </div>
           </li>
         <% else %>
@@ -42,7 +44,7 @@
               <%= link_to "Se Connecter", new_user_session_path, class: "dropdown-item" %>
 
                 <div class="dropdown-divider"></div>
-              <%= link_to "Mettre mon animal sur PAC", new_user_session_path, class: "dropdown-item text-center" %>
+              <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "dropdown-item text-center" %>
             </div>
           </li>
         <% end %>

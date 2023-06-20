@@ -1,19 +1,21 @@
 
 <div id="<%= dom_id @pet %>">
   <p>
-    <strong>Name:</strong>
+    
+    <strong>Nom:</strong>
     <%= @pet.name %>
   </p>
 
   <p>
-    <strong>Address:</strong>
+
+    <strong>Emplacement:</strong>
     <%= @pet.address %>
   </p>
 
-  <%# <p>
-    <strong>Stars:</strong>
-    <%= pet.stars %>
-  <%# </p> %>
+  <p>
+    <strong>Paws:</strong>
+    <%= @pet.rating %>
+  </p>
 
 </div>
 
@@ -22,12 +24,13 @@
   <%= cl_image_tag(@pet.photo.key, width: 300) %>
 <% end  %>
 
-<%= @pet.address %>
+<i class="fa-solid fa-map-pin"></i> <%= @pet.address %>
 <%= @pet.content %>
 <%= @pet.species %>
-<%= @pet.price %>
-<%= @pet.rating %>
 
-<%= link_to 'Edit this pet', edit_pet_path %>
-<%= link_to 'Back to pets', pets_path %>
-<%# <%= link_to 'Delte this pet', pet_path() %>
+<i class="fa-solid fa-euro-sign"></i> <%= @pet.price %>
+<i class="fa-solid fa-paw"></i> <%= @pet.rating %>
+
+<%= link_to 'Modifier cet animal', edit_pet_path %>
+<%= link_to 'Retirer cet animal', pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Veux-tu supprimer cet animal ?"} %>
+<%= link_to 'Retour aux animaux à louer', pets_path %>
