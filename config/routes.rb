@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :pets do
-    resources :reservations, only: [:create, :edit, :update, :index]
+    resources :reservations, only: [:create]
   end
 
   get 'user/pets', to: 'pets#user_pets', as: 'user_pets'
+  
+  resources :reservations, only: [:edit, :update, :index, :destroy]
+
 end
