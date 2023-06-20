@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.pet = Pet.find(params[:pet_id])
     if @reservation.save!
-      redirect_to pets_path
+      redirect_to reservations_path
     else
       render 'pets/show', status: :unprocessable_entity
     end
