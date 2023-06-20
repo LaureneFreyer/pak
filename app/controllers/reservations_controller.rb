@@ -3,10 +3,10 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.all
   end
 
-  def update
+  def create
   end
 
-  def create
+  def update
   end
 
   def destroy
