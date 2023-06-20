@@ -1,11 +1,7 @@
 <%= render 'shared/banner' %>
-<h1>Suggestions:</h1>
 
 <div id="suggestions">
-  <% @pets.each do |pet| %>
-    <%# <%= render pet %>
-    <p>
-      <%= link_to "Louer cet animal", pet %>
-    </p>
-  <% end %>
+  <div class="card-container">
+  <%= render partial: "pets/pet", collection: @pets %>
+  </div>
 </div>
