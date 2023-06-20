@@ -1,3 +1,4 @@
+
 <div class="login-form-container">
   <h2>Ajouter un animal de compagnie</h2>
 
@@ -18,3 +19,17 @@
     </div>
   <% end %>
 </div>
+
+<h1>Add a pet</h1>
+
+<%= simple_form_for (@pet) do |f|  %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :address %>
+  <%= f.input :content %>
+  <%= f.input :species %>
+  <%= f.input :price %>
+  <%= f.input :rating %>
+  <%= f.submit 'Click to add' %>
+<% end %>
+

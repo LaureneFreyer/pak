@@ -1,3 +1,4 @@
+
 <div id="<%= dom_id pet %>">
   <p>
     <strong>Name:</strong>
@@ -15,3 +16,19 @@
   <%# </p> %>
 
 </div>
+
+<h1><%= @pet.name %></h1>
+<% if @pet.photo.attached? %>
+  <%= cl_image_tag(@pet.photo.key, width: 300) %>
+<% end  %>
+
+<%= @pet.address %>
+<%= @pet.content %>
+<%= @pet.species %>
+<%= @pet.price %>
+<%= @pet.rating %>
+
+<%= link_to 'Edit this pet', edit_pet_path %>
+<%= link_to 'Back to pets', pets_path %>
+<%# <%= link_to 'Delte this pet', pet_path() %>
+

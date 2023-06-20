@@ -1,0 +1,12 @@
+<h1>Edit your pet</h1>
+
+<%= simple_form_for (@pet),do |f|  %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :address %>
+  <%= f.input :content %>
+  <%= f.input :species %>
+  <%= f.input :price %>
+  <%= f.input :rating %>
+  <%= f.submit 'Click to edit' %>
+<% end %>
