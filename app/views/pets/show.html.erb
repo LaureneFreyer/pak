@@ -31,8 +31,6 @@
 <i class="fa-solid fa-euro-sign"></i> <%= @pet.price %>
 <i class="fa-solid fa-paw"></i> <%= @pet.rating %>
 
-<%= link_to 'Modifier cet animal', edit_pet_path(@pet) %>
-<%= link_to 'Retirer cet animal', pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Veux-tu supprimer cet animal ?"} %>
 <%= link_to 'Retour aux animaux à louer', pets_path %>
 
 <%= simple_form_for [@pet, @reservation] do |f| %>

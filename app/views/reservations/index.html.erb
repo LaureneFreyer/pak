@@ -1,9 +1,22 @@
-<h1>Mes réservations</h1>
+<h1 id="reservations">Mes réservations</h1>
 
 <% @reservations.each do |reservation| %>
-  <%= reservation.pet.name %>
-  <%= reservation.start_date %>
-  <%= reservation.end_date %>
-  <%= link_to 'Modifier ma réservation', edit_reservation_path(reservation) %>
-  <%= link_to "Annuler ma réservation", reservation_path(reservation), data: { turbo_method: :delete, turbo_confirm: 'Veux-tu vraiment annuler ta réservation? :('} %>
+  <div class="reservation-container">
+    <%= cl_image_tag(reservation.pet.photo.key, class:'photo-reservation') %>
+    <div class="reservations-infos">
+      <div class="reservations-options">
+        <button><i class="fa-solid fa-pencil"></i><%= link_to '', edit_reservation_path(reservation) %></button>
+        <button><i class="fa-regular fa-circle-xmark"><%= link_to "", reservation_path(reservation), data: { turbo_method: :delete, turbo_confirm: 'Veux-tu vraiment annuler ta réservation? :('} %></i></button>
+      </div>
+      <div class="name">
+        <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class:'link-pet-name'%></h2>
+      </div>
+      <div class="dates">
+        <p>du <%= reservation.start_date %> au <%= reservation.end_date %></p>
+      </div>
+      <div class="city">
+      <p><i class="fa-solid fa-location-dot"></i> <%= reservation.pet.address %></p>
+      </div>
+    </div>
+  </div>
 <% end %>
