@@ -1,0 +1,12 @@
+<h1>Mes animaux</h1>
+
+<% @pets.each do |pet| %>
+  <div class="card">
+    <h2><%= pet.name %></h2>
+    <p><%= pet.species %></p>
+    <p><%= pet.rating %></p>
+    <p><%= pet.price %></p>
+  </div>
+  <%= link_to 'Modifier cet animal', edit_pet_path(pet) %>
+  <%= link_to 'Retirer cet animal', pet_path(pet), data: { turbo_method: :delete, turbo_confirm: "Veux-tu supprimer cet animal ?"} %>
+<% end %>

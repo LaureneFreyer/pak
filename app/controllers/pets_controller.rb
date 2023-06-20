@@ -6,6 +6,10 @@ class PetsController < ApplicationController
     @pets = Pet.all
   end
 
+  def user_pets
+    @pets = current_user.pets
+  end
+
   def show
   end
 
