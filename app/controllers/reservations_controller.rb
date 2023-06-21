@@ -1,7 +1,8 @@
 class ReservationsController < ApplicationController
   before_action :find_params, only: [:edit, :update, :destroy]
-  def index
-    @reservations = Reservation.all
+
+  def user_reservations
+    @reservations = current_user.reservations
   end
 
   def create
@@ -9,7 +10,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.pet = Pet.find(params[:pet_id])
     if @reservation.save!
-      redirect_to reservations_path
+      redirect_to user_reservations_path
     else
       render 'pets/show', status: :unprocessable_entity
     end
@@ -21,7 +22,7 @@ class ReservationsController < ApplicationController
   def update
     @reservation.update(set_params)
     if @reservation.save!
-      redirect_to reservations_path
+      redirect_to user_reservations_path
     else
       render :edit, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to reservations_path
+    redirect_to user_reservations_path
   end
 
   private

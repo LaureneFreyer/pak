@@ -32,7 +32,14 @@
 
 .avatar {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
+}
+.avatar:hover {
+  width: 60px;
+  height: 60px;
+  background-color: white;
 }
 
 .avatar-large {
@@ -100,4 +107,7 @@ button.btn.btn-outline-primary {
   border-radius: 5px;
   background-color: #f0f0f0;
   color: #333;
+}
+.icon-navbar:hover {
+  font-size: 25px;
 }

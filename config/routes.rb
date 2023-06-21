@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   end
 
   get 'user/pets', to: 'pets#user_pets', as: 'user_pets'
+  get 'user/reservations', to: 'reservations#user_reservations', as: 'user_reservations'
 
-  resources :reservations, only: [:edit, :update, :index, :destroy]
+  resources :reservations, only: [:edit, :update, :destroy]
 
   get 'confidentiality', to: 'pages#confidentiality'
   get 'terms', to: 'pages#terms'
