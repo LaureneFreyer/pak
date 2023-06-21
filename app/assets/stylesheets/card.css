@@ -6,6 +6,9 @@
   }
 }
 
+.hidden {
+  display: none;
+}
 
 
 .card-container{
@@ -98,4 +101,23 @@
   align-items: center;
   font-size: 10px;
   color: white;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.see-more-button {
+  background-color: #f5914e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.see-more-button:hover {
+  background-color: #d98035;
 }
