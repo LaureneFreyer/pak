@@ -33,3 +33,6 @@
 .card-trip-user-pet {
   margin: 40px;
 }
+.card-trip-user i {
+  padding-left: 2px;
+}
