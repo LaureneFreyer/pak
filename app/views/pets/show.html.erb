@@ -1,40 +1,26 @@
+<div id="pet-details">
+  <div class="pet-card">
+    <div id="<%= dom_id @pet %>">
+      <img class="pet-photo" src="<%= @pet.photo.attached? ? cl_image_path(@pet.photo.key) : '#' %>" alt="<%= @pet.name %>">
+      <h1 class="pet-name"><%= @pet.name %></h1>
+      <div class="pet-attributes">
+        <p><i class="fa-solid fa-map-pin"></i> <%= @pet.address %></p>
+        <p><i class="fa-solid fa-paw"></i> <%= @pet.rating %></p>
+        <p>"<%= @pet.content %>"</p>
+        <p>Catégorie : <%= @pet.species %></p>
+        <p><i class="fa-solid"></i> <%= @pet.price %>€</p>
+      </div>
+    </div>
+  </div>
 
-<div id="<%= dom_id @pet %>">
-  <p>
-
-    <strong>Nom:</strong>
-    <%= @pet.name %>
-  </p>
-
-  <p>
-
-    <strong>Emplacement:</strong>
-    <%= @pet.address %>
-  </p>
-
-  <p>
-    <strong>Paws:</strong>
-    <%= @pet.rating %>
-  </p>
-
+  <div class="reservation-wrapper">
+    <div class="form-card">
+      <%= simple_form_for [@pet, @reservation] do |f| %>
+        <%= f.input :start_date, label: 'Date de début' %>
+        <%= f.input :end_date, label: 'Date de fin' %>
+        <%= f.submit 'Réserver', class: 'reservation-button' %>
+      <% end %>
+    </div>
+    <%= link_to 'Retour', pets_path, class: 'return-button' %>
+  </div>
 </div>
-
-<h1><%= @pet.name %></h1>
-<% if @pet.photo.attached? %>
-  <%= cl_image_tag(@pet.photo.key, width: 300) %>
-<% end  %>
-
-<i class="fa-solid fa-map-pin"></i> <%= @pet.address %>
-<%= @pet.content %>
-<%= @pet.species %>
-
-<i class="fa-solid fa-euro-sign"></i> <%= @pet.price %>
-<i class="fa-solid fa-paw"></i> <%= @pet.rating %>
-
-<%= link_to 'Retour aux animaux à louer', pets_path %>
-
-<%= simple_form_for [@pet, @reservation] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit 'Réserver' %>
-<% end %>
