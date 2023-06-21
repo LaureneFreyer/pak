@@ -1,22 +1,22 @@
-<h1 id="user-pets-title">Mes animaux</h1>
+  <h1 id="user-pets-title">Mes animaux</h1>
 
-<div class="all-pets-user">
-  <% @pets.each do |pet| %>
-    <div class="card-trip-user-pet">
-      <div class="card">
-      <%= cl_image_tag pet.photo.key, width: 100, height: 150 %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= link_to pet.name, pet_path(pet), class:'link-pet-name' %></h2>
-          <h3 class="card-trip-pricing"><%= pet.price %>€</h3>
+  <div class="all-pets-user">
+    <% @pets.each do |pet| %>
+      <div class="card-trip-user-pet">
+        <div class="card">
+          <%= cl_image_tag pet.photo.key, width: 100, height: 150 %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to pet.name, pet_path(pet), class:'link-pet-name' %></h2>
+              <h3 class="card-trip-pricing"><%= pet.price %>€</h3>
+            </div>
+            <div class="card-trip-user"><%= pet.rating %><i class="fa-solid fa-paw"></i></div>
           </div>
-          <div class="card-trip-user"><%= pet.rating %><i class="fa-solid fa-paw"></i></div>
-        </div>
           <div class="card-links-user">
             <%= link_to 'Modifier', edit_pet_path(pet), class: 'link-user' %>
             <%= link_to 'Retirer', pet_path(pet), data: { turbo_method: :delete, turbo_confirm: "Veux-tu supprimer cet animal ?"}, class:'link-user' %>
           </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 </div>
