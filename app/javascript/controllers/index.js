@@ -4,11 +4,17 @@
 
 import { application } from "./application"
 
+import AnimtextController from "./animtext_controller"
+application.register("animtext", AnimtextController)
+
 import BannerController from "./banner_controller"
 application.register("banner", BannerController)
 
 import CategoryController from "./category_controller"
 application.register("category", CategoryController)
+
+import FooterController from "./footer_controller"
+application.register("footer", FooterController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

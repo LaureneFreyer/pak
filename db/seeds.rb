@@ -5,6 +5,7 @@ User.destroy_all
 
 bob = User.create!(email: 'bob@test.com', password: 'password', role: 'locataire', first_name: 'Bob', last_name: 'Le Bricoleur')
 dora = User.create!(email: 'dora@test.com', password: 'password', role: 'propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
+cyrille = User.create!(email: 'cyrille.varin@live.fr', password: 'holahola', role: 'propriétaire', first_name: 'Cyrille', last_name: "Varin")
 
 file1 = URI.open("https://chatschiens.com/wp-content/uploads/2020/04/Berger-des-Shetland.jpg")
 polly = Pet.new(user: bob, name: 'Polly', address: 'Rennes', price: 30, content: 'Magnifique berger des Shetland, très, très, TRES poilu.', rating: 5, species: 'Chien')
@@ -65,3 +66,43 @@ file12 = URI.open('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?
 tigrou = Pet.new(user: dora, name: 'Tigrou', address: 'Cergy', price: 15, content: 'Tigrou adore faire la sieste.', rating: 5, species: 'Chat')
 tigrou.photo.attach(io: file12, filename: 'tigrou.jpg', content_type: 'images/png')
 tigrou.save!
+
+file13 = URI.open('https://www.planetesauvage.com/fileadmin/_processed_/a/9/csm_dauphin-bandeau_db916c1aa3.jpg')
+flip = Pet.new(user: cyrille, name: 'Flipper', address: 'Biarritz', price: 299, content: 'Adore faire des ronds dans la mer', rating: 4.9, species: 'Dauphin')
+flip.photo.attach(io: file13, filename: 'dauphin.jpg', content_type: 'images/png')
+flip.save!
+
+file14 = URI.open('https://www.consoglobe.com/wp-content/uploads/2016/12/adopter-tortue-1.jpg')
+marie = Pet.new(user: cyrille, name: 'Marie', address: 'Balma', price: 55, content: 'Sa nourriture préférée? La salade bien sur', rating: 3.9, species: 'Tortue')
+marie.photo.attach(io: file14, filename: 'tortue.jpg', content_type: 'images/png')
+marie.save!
+
+file15 = URI.open('https://www.woopets.fr/assets/races/000/103/og-image/caniche_2.jpg')
+milou = Pet.new(user: cyrille, name: 'Milou', address: 'Toulouse', price: 25, content: 'Vous le louez, vous le gardez', rating: 0, species: 'Chien')
+milou.photo.attach(io: file15, filename: 'milou.jpg', content_type: 'images/png')
+milou.save!
+
+file16 = URI.open('https://www.ipnoze.com/wordpress/wp-content/uploads/2023/05/001_20230501144039.jpg')
+garfiel = Pet.new(user: cyrille, name: 'Garfiel', address: 'Nice', price: 8, content: "Le prix de la nourriture n'est pas inclus", rating: 3, species: 'Chat')
+garfiel.photo.attach(io: file16, filename: 'garfiel.jpg', content_type: 'images/png')
+garfiel.save!
+
+file17 = URI.open('https://thumbs.dreamstime.com/b/tigre-de-bengale-15025599.jpg')
+alfred = Pet.new(user: cyrille, name: 'Alfred', address: 'Paris', price: 899, content: "Sage, mais nécessite une laisse renforcée", rating: 5, species: 'Tigre')
+alfred.photo.attach(io: file17, filename: 'alfred.jpg', content_type: 'images/png')
+alfred.save!
+
+file18 = URI.open('https://upload.chatsdumonde.com/img_global/24-cousins-du-chat/_light-14123-panthere-noire.jpg')
+bagera = Pet.new(user: cyrille, name: 'Bagheera', address: 'Bali', price: 2899, content: "Sage, mais nécessite une laisse renforcée", rating: 5, species: 'Panthere')
+bagera.photo.attach(io: file18, filename: 'bagheera.jpg', content_type: 'images/png')
+bagera.save!
+
+file19 = URI.open('https://www.autourdesanimaux.com/wp-content/uploads/blobfish-2-300x300.jpeg')
+boby = Pet.new(user: cyrille, name: 'Boby', address: 'Brest', price: 278, content: "C'est un poisson? Essayer le", rating: 2, species: 'Poisson')
+boby.photo.attach(io: file19, filename: 'boby.jpg', content_type: 'images/png')
+boby.save!
+
+file20 = URI.open('https://jardinage.lemonde.fr/images/dossiers/2019-09/perroquet-ara-133925.jpg')
+jacob = Pet.new(user: cyrille, name: 'Jacob', address: 'Canne', price: 198, content: "Jacooooooob!", rating: 5, species: 'Perroquet')
+jacob.photo.attach(io: file20, filename: 'jacob.jpg', content_type: 'images/png')
+jacob.save!

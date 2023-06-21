@@ -1,17 +1,4 @@
-
-
-@media (max-width: 768px) {
-  .card {
-    flex-basis: 100%;
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-
-.card-container{
+.card-container {
   width: 900px;
   justify-content: center;
   margin: auto;
@@ -28,18 +15,16 @@
 }
 
 .card {
-  font-family:"Work Sans", "Helvetica", "sans-serif";
+  font-family: "Work Sans", "Helvetica", "sans-serif";
   text-align: center;
   display: flex;
-
   align-items: center;
   width: 220px;
   height: 220px;
   height: auto;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
 }
 
 .card:hover {
@@ -53,13 +38,43 @@
   border-top-right-radius: 4px;
 }
 
+.card.card-link {
+  cursor: pointer;
+}
+
+.card.card-link:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.card.card-link h2 a {
+  text-decoration: none;
+  color: #ea726b;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card.card-link p {
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card.card-link h3 {
+  text-decoration: none;
+  color: #ea726b;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .card-trip-infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
-
 
 .card-trip-infos p {
   text-decoration: none;
@@ -152,7 +167,6 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-
 
 .category-button:hover {
   background-color: #d98035;
