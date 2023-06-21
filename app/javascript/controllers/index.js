@@ -9,3 +9,6 @@ application.register("banner", BannerController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import ScrollController from "./scroll_controller"
+application.register("scroll", ScrollController)
