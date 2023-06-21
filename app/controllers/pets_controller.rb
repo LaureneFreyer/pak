@@ -35,7 +35,7 @@ class PetsController < ApplicationController
   def update
     @pet.update(set_params)
     if @pet.save
-      redirect_to pet_path(@pet)
+      redirect_to user_pets_path
     else
       render :edit, status: :unprocessable_entity
     end
