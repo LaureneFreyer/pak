@@ -1,9 +1,9 @@
-#reservations {
+#reservations-title {
   color: #ea726b;
   margin: 30px 50px;
 }
 .reservation-container {
-  max-width: 700px;
+  width: 460px;
   height: 200px;
   margin: 30px 50px;
   border: 1px solid #ddd;
@@ -12,6 +12,10 @@
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.reservation-container:hover {
+  height: 240px;
+  transition-duration: 500ms;
 }
 
 .photo-reservation {
@@ -33,6 +37,22 @@
   margin-bottom: 10px;
 }
 .link-pet-name:hover {
-  font-size: 30px;
-  font-style: italic;
+  font-size: 35px;
+}
+.reservations-options .icon {
+  color: #ea726b;
+  padding: 4px;
+}
+.all-reservations {
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .reservation-container {
+    flex-basis: 100%;
+  }
 }
