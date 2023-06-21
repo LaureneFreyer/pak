@@ -24,7 +24,9 @@
                 <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
 
         <% end %>
-      <ul class="navbar-nav" id="usernav">
+<%= link_to pets_path do %>
+  <i class="fa-solid fa-paw" style="color: #ea726b;"></i>
+<% end %>      <ul class="navbar-nav" id="usernav">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "https://t3.ftcdn.net/jpg/00/26/43/56/360_F_26435684_nI2nmc5VtQ0N3vbBld4DQFGSXN0G54vj.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
