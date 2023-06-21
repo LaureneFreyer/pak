@@ -13,6 +13,9 @@ application.register("banner", BannerController)
 import CategoryController from "./category_controller"
 application.register("category", CategoryController)
 
+import DatepickrController from "./datepickr_controller"
+application.register("datepickr", DatepickrController)
+
 import FooterController from "./footer_controller"
 application.register("footer", FooterController)
 

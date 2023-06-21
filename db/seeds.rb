@@ -3,9 +3,20 @@ require "open-uri"
 Pet.destroy_all
 User.destroy_all
 
-bob = User.create!(email: 'bob@test.com', password: 'password', role: 'locataire', first_name: 'Bob', last_name: 'Le Bricoleur')
-dora = User.create!(email: 'dora@test.com', password: 'password', role: 'propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
-cyrille = User.create!(email: 'cyrille.varin@live.fr', password: 'holahola', role: 'propriétaire', first_name: 'Cyrille', last_name: "Varin")
+bob_photo = URI.open("https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80")
+bob = User.new(email: 'bob@test.com', password: 'password', role: 'locataire', first_name: 'Bob', last_name: 'Le Bricoleur')
+bob.photo.attach(io: bob_photo, filename: "bob.jpg", content_type: "images/png")
+bob.save!
+
+dora_photo = URI.open("https://images.unsplash.com/photo-1484863137850-59afcfe05386?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80")
+dora = User.new(email: 'dora@test.com', password: 'password', role: 'propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
+dora.photo.attach(io: dora_photo, filename: "dora.jpg", content_type: "images/png")
+dora.save!
+
+cyrille_photo = URI.open("https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80")
+cyrille = User.new(email: 'cyrille.varin@live.fr', password: 'holahola', role: 'propriétaire', first_name: 'Cyrille', last_name: "Varin" )
+cyrille.photo.attach(io: cyrille_photo, filename: "cyrille.jpg", content_type: "images/png")
+cyrille.save!
 
 file1 = URI.open("https://chatschiens.com/wp-content/uploads/2020/04/Berger-des-Shetland.jpg")
 polly = Pet.new(user: bob, name: 'Polly', address: 'Rennes', price: 30, content: 'Magnifique berger des Shetland, très, très, TRES poilu.', rating: 5, species: 'Chien')
@@ -83,7 +94,7 @@ milou.photo.attach(io: file15, filename: 'milou.jpg', content_type: 'images/png'
 milou.save!
 
 file16 = URI.open('https://www.ipnoze.com/wordpress/wp-content/uploads/2023/05/001_20230501144039.jpg')
-garfiel = Pet.new(user: cyrille, name: 'Garfiel', address: 'Nice', price: 8, content: "Le prix de la nourriture n'est pas inclus", rating: 3, species: 'Chat')
+garfiel = Pet.new(user: cyrille, name: 'Garfield', address: 'Nice', price: 8, content: "Le prix de la nourriture n'est pas inclus", rating: 3, species: 'Chat')
 garfiel.photo.attach(io: file16, filename: 'garfiel.jpg', content_type: 'images/png')
 garfiel.save!
 
@@ -103,6 +114,6 @@ boby.photo.attach(io: file19, filename: 'boby.jpg', content_type: 'images/png')
 boby.save!
 
 file20 = URI.open('https://jardinage.lemonde.fr/images/dossiers/2019-09/perroquet-ara-133925.jpg')
-jacob = Pet.new(user: cyrille, name: 'Jacob', address: 'Canne', price: 198, content: "Jacooooooob!", rating: 5, species: 'Perroquet')
+jacob = Pet.new(user: cyrille, name: 'Jacob', address: 'Cannes', price: 198, content: "Jacooooooob!", rating: 5, species: 'Perroquet')
 jacob.photo.attach(io: file20, filename: 'jacob.jpg', content_type: 'images/png')
 jacob.save!
