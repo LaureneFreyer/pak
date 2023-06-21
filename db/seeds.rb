@@ -7,7 +7,7 @@ bob = User.create!(email: 'bob@test.com', password: 'password', role: 'locataire
 dora = User.create!(email: 'dora@test.com', password: 'password', role: 'propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
 
 file1 = URI.open("https://chatschiens.com/wp-content/uploads/2020/04/Berger-des-Shetland.jpg")
-polly = Pet.new(user: bob, name: 'Polly', address: 'Rennes', price: 30, content: 'Magnifique chien très poilu.', rating: 5, species: 'Chien')
+polly = Pet.new(user: bob, name: 'Polly', address: 'Rennes', price: 30, content: 'Magnifique berger des Shetland, très, très, TRES poilu.', rating: 5, species: 'Chien')
 polly.photo.attach(io: file1, filename: 'shetland.jpg', content_type: 'images/png')
 polly.save!
 
