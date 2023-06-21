@@ -16,7 +16,7 @@ export default class extends Controller {
 
     if (window.scrollY > 20) {
       logoImage.classList.add('small-logo');
-      navbar.style.position = "fixed";
+      navbar.style.position = "sticky";
       navbar.style.top = "0";
       navbar.style.width = "100%";
     } else {

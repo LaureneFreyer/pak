@@ -121,3 +121,38 @@
 .see-more-button:hover {
   background-color: #d98035;
 }
+
+.page-title {
+  text-align: center;
+}
+
+#category-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-button {
+  border: none;
+  background-color: transparent;
+  color: #ea726b;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.category-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.category-button:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.category-button:hover {
+  background-color: #d98035;
+  color: white;
+  border-radius: 8%;
+}
