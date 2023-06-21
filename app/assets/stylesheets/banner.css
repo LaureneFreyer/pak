@@ -1,14 +1,31 @@
 
+@media(max-width: 1440px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media(max-width: 900px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+    width: 300px;
+  }
+}
+
+.banner-container{
+  justify-content: center;
+  text-align: center;
+}
 
 main{
-  margin-top: 50px;
   width: 100%;
-
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-left: 2%;
 }
 
 .card-banner{
