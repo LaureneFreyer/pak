@@ -1,31 +1,18 @@
-<h1>Liste de tous nos animaux :</h1>
+<h1 class="page-title">Liste de tous nos animaux :</h1>
 
-<div id="category-filter" data-controller="category">
+<div id="category-filter" data-controller="category" class="text-center">
   <button class="category-button" data-category="all" data-target="category.categoryButton">Tous</button>
   <button class="category-button" data-category="chien" data-target="category.categoryButton">Chiens</button>
   <button class="category-button" data-category="chat" data-target="category.categoryButton">Chats</button>
   <button class="category-button" data-category="oiseau" data-target="category.categoryButton">Oiseaux</button>
+  <button class="category-button" data-category="autres" data-target="category.categoryButton">Autres</button>
 </div>
 
 <div id="suggestions">
   <div class="card-container">
     <% @pets.each do |pet| %>
-      <div class="card-trip" data-category="<%= pet.species %>">
-        <div class="card">
-          <%= cl_image_tag pet.photo.key, width: 100, height: 150 %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= pet.name %></h2>
-              <p><%= pet.species %></p>
-              <h2 class="card-trip-pricing"><%= pet.price %>€</h2>
-            </div>
-            <div class="card-trip-user avatar-bordered">
-              <i class="fa-solid fa-star" style="color: #000000;"></i><%= pet.rating %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+  <%= render partial: "shared/pet", locals: { pet: pet } %>
+  <% end %>
   </div>
   <div class="see-more-container">
     <%= link_to "Retour", "/", class: "see-more-button" %></li>
