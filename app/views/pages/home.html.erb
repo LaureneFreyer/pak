@@ -5,6 +5,8 @@
 
 <div id="suggestions">
   <div class="card-container">
-  <%= render partial: "shared/pet", collection: @pets %>
+  <% @pets.first(6).each do |pet| %>
+  <%= render partial: "shared/pet", locals: { pet: pet } %>
+  <% end %>
   </div>
 </div>
