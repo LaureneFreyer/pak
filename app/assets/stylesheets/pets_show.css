@@ -50,9 +50,12 @@
   padding-right: 20px; /* Ajout de l'espace à droite */
 }
 
+
+
 .pet-photo {
-  width: 100%;
+  width: 80%;
   object-fit: cover;
+  border-radius: 8%;
   transition: transform 0.3s ease-in-out; /* Ajout de la transition */
 }
 
@@ -65,7 +68,7 @@
   font-size: 24px;
   font-weight: bold;
   margin: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .pet-attributes i {
@@ -75,6 +78,7 @@
 
 .pet-attributes p {
   padding: 10px;
+  color: black;
 }
 
 .return-button {
@@ -108,7 +112,4 @@
 
 .reservation-button:hover {
   background-color: #d85f58;
-}
-.pet-attributes p {
-  color: black
 }

@@ -57,11 +57,11 @@ troy.photo.attach(io: file10, filename: 'singe.jpg', content_type: 'images/png')
 troy.save!
 
 file11 = URI.open('https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')
-roucky = Pet.new(user: bob, name: 'Roucky', address: 'St-Malo', price: 25, content: 'Roucky apprécie beaucoup la chasse à la truffe.', rating: 4, species: 'chien')
+roucky = Pet.new(user: bob, name: 'Roucky', address: 'St-Malo', price: 25, content: 'Roucky apprécie beaucoup la chasse à la truffe.', rating: 4, species: 'Chien')
 roucky.photo.attach(io: file11, filename: 'roucky.jpg', content_type: 'images/png')
 roucky.save!
 
 file12 = URI.open('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')
-tigrou = Pet.new(user: dora, name: 'Tigrou', address: 'Cergy', price: 15, content: 'Tigrou adore faire la sieste.', rating: 5, species: 'chat')
+tigrou = Pet.new(user: dora, name: 'Tigrou', address: 'Cergy', price: 15, content: 'Tigrou adore faire la sieste.', rating: 5, species: 'Chat')
 tigrou.photo.attach(io: file12, filename: 'tigrou.jpg', content_type: 'images/png')
 tigrou.save!
