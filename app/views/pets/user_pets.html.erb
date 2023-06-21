@@ -8,10 +8,9 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= link_to pet.name, pet_path(pet), class:'link-pet-name' %></h2>
-            <p><%= pet.species %></p>
-          <h2 class="card-trip-pricing"><%= pet.price %>€</h2>
+          <h3 class="card-trip-pricing"><%= pet.price %>€</h3>
           </div>
-          <div class="card-trip-user avatar-bordered" ><i class="fa-solid fa-star" style="color: white;"></i><%= pet.rating %> </div>
+          <div class="card-trip-user"><%= pet.rating %><i class="fa-solid fa-paw"></i></div>
         </div>
           <div class="card-links-user">
             <%= link_to 'Modifier', edit_pet_path(pet), class: 'link-user' %>
