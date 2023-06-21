@@ -3,7 +3,8 @@
   margin: 30px 50px;
 }
 .card-links-user {
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 .card-links-user .link-user {
   text-decoration: none;
