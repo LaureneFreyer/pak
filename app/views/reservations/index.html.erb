@@ -1,26 +1,28 @@
-<h1 id="reservations">Mes réservations</h1>
+<h1 id="reservations-title">Mes réservations</h1>
 
-<% @reservations.each do |reservation| %>
-  <div class="reservation-container">
-    <%= cl_image_tag(reservation.pet.photo.key, class:'photo-reservation') %>
-    <div class="reservations-infos">
-      <div class="reservations-options d-flex justify-content-end">
-        <%= link_to controller: 'reservations', action: 'edit', id: reservation.id do %>
-          <i class="fa-solid fa-pencil"></i>
-        <% end %>
-        <%= link_to reservations_path(reservation.id), data: { method: :delete, turbo_confirm: 'Veux-tu vraiment annuler ta réservation? :('} do %>
-          <i class="fa-regular fa-circle-xmark"></i>
-        <% end %>
+<div class="all-reservations justify-content-center">
+  <% @reservations.each do |reservation| %>
+      <div class="reservation-container">
+        <%= cl_image_tag(reservation.pet.photo.key, class:'photo-reservation') %>
+        <div class="reservations-infos">
+          <div class="reservations-options d-flex justify-content-end">
+            <%= link_to controller: 'reservations', action: 'edit', id: reservation.id do %>
+              <i class="fa-solid fa-pencil icon"></i>
+            <% end %>
+            <%= link_to reservation_path(reservation.id), data: { turbo_method: :delete, turbo_confirm: 'Veux-tu vraiment annuler ta réservation? :('} do %>
+              <i class="fa-regular fa-circle-xmark icon"></i>
+            <% end %>
+          </div>
+          <div class="name">
+            <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class:'link-pet-name'%></h2>
+          </div>
+          <div class="dates">
+            <p>du <%= reservation.start_date %> au <%= reservation.end_date %></p>
+          </div>
+          <div class="city">
+          <p><i class="fa-solid fa-location-dot"></i> <%= reservation.pet.address %></p>
+          </div>
+        </div>
       </div>
-      <div class="name">
-        <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class:'link-pet-name'%></h2>
-      </div>
-      <div class="dates">
-        <p>du <%= reservation.start_date %> au <%= reservation.end_date %></p>
-      </div>
-      <div class="city">
-      <p><i class="fa-solid fa-location-dot"></i> <%= reservation.pet.address %></p>
-      </div>
-    </div>
-  </div>
-<% end %>
+    <% end %>
+</div>
