@@ -1,0 +1,34 @@
+#user-pets-title {
+  color: #ea726b;
+  margin: 30px 50px;
+}
+.card-links-user {
+  padding-top: 20px;
+}
+.card-links-user .link-user {
+  text-decoration: none;
+  color: #ea726b;
+  padding: 5px;
+}
+.card-links-user .link-user:hover {
+  font-size: 18px;
+  background-color: #ea726b;
+  color: white;
+  border-radius: 20px;
+}
+.all-pets-user {
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .card-trip-user-pet {
+    flex-basis: 100%;
+  }
+}
+.card-trip-user-pet {
+  margin: 40px;
+}
