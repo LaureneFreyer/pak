@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   get 'company_info', to: 'pages#company_info'
 
   get '/animaux-autour', to: 'pets#animaux_autour', as: 'animaux_autour'
+  post '/animaux-autour', to: 'pets#animaux_autour'
 
 end

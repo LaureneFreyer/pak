@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AnimauxAutourController from "./animaux_autour_controller"
+application.register("animaux-autour", AnimauxAutourController)
+
 import AnimtextController from "./animtext_controller"
 application.register("animtext", AnimtextController)
 

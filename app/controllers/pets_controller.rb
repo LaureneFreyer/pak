@@ -70,8 +70,30 @@ class PetsController < ApplicationController
   end
 
   def animaux_autour
-    @pets = Pet.near([latitude, longitude], radius)
+    if params[:latitude].present? && params[:longitude].present?
+      @pets = Pet.near([params[:latitude], params[:longitude]], 100)
+    else
+      @pets = Pet.near([46.160329, -1.151139], 100)  # Par défaut à Paris si aucune localisation n'est fournie
+    end
+
+    @markers = @pets.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { pet: pet }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
+    respond_to do |format|
+      format.html
+      format.json { render json: { pets: @pets, markers: @markers } }
+    end
   end
+
+
+
+
+
 
 
   private
