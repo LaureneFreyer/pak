@@ -1,3 +1,6 @@
+.index-body{
+  justify-content: space-between;
+}
 #pet-container {
   display: flex;
   min-height: calc(100vh - 80px - 80px);
@@ -126,3 +129,4 @@
 .return-button:hover {
   background-color: #d85f58;
 }
+

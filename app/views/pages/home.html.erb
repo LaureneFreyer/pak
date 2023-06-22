@@ -12,10 +12,11 @@
 </h1>
   <div class="banner-container">
     <%= render 'shared/banner' %>
+  </div>
   <h1>Nos suggestions</h1>
     <div id="suggestions">
-      <div class="card-container">
-        <% @pets.sample(6).each do |pet| %>
+      <div class="card-suggestion">
+        <% @pets.sample(12).each do |pet| %>
         <%= render partial: "shared/pet", locals: { pet: pet } %>
         <% end %>
       </div>

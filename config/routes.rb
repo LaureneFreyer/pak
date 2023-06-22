@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get 'site_map', to: 'pages#site_map'
   get 'site_operation', to: 'pages#site_operation'
   get 'company_info', to: 'pages#company_info'
+
+  get '/animaux-autour', to: 'pets#animaux_autour', as: 'animaux_autour'
+
 end

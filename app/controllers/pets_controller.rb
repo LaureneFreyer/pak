@@ -24,8 +24,18 @@ class PetsController < ApplicationController
   end
 
   def show
+    @pet = Pet.find(params[:id])
+    @markers = [
+      {
+        lat: @pet.latitude,
+        lng: @pet.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { pet: @pet }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    ]
     @reservation = Reservation.new
   end
+
 
   def new
     @pet = Pet.new
@@ -58,6 +68,11 @@ class PetsController < ApplicationController
     @pet.destroy
     redirect_to pets_path
   end
+
+  def animaux_autour
+    @pets = Pet.near([latitude, longitude], radius)
+  end
+
 
   private
 
