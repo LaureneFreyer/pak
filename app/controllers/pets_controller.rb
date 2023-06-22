@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :find_pet, only: [:show, :edit, :update, :destroy]
+  before_action :map, only: [:index]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -11,20 +12,11 @@ class PetsController < ApplicationController
         OR users.first_name ILIKE :query
       SQL
       @pets = Pet.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+
     else
       @pets = Pet.all
     end
     params[:query] = nil
-
-    @pets = Pet.all
-    @markers = @pets.geocoded.map do |pet|
-      {
-        lat: pet.latitude,
-        lng: pet.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {pet: pet}),
-        marker_html: render_to_string(partial: "marker")
-      }
-    end
   end
 
   def user_pets
@@ -75,5 +67,17 @@ class PetsController < ApplicationController
 
   def find_pet
     @pet = Pet.find(params[:id])
+  end
+
+  def map
+    @pets = Pet.geocoded
+      @markers = @pets.geocoded.map do |pet|
+        {
+          lat: pet.latitude,
+          lng: pet.longitude,
+          info_window_html: render_to_string(partial: "info_window", locals: { pet: pet }),
+          marker_html: render_to_string(partial: "marker")
+        }
+      end
   end
 end
