@@ -53,3 +53,55 @@
 .login-form-container .devise-links a:hover {
   text-decoration: underline;
 }
+.avatar-profil {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profil-container {
+  width: 600px;
+  max-height: 270px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+.profil-container h2 {
+  color: #ea726b;
+  font-size: 26px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.profil-page {
+  padding: 60px;
+}
+.infos-pets-user {
+  padding-top: 35px;
+}
+.infos-pets-user p {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.infos-pets-user .last-p {
+  border-bottom: none;
+}
+.number-user {
+  font-size: 23px;
+}
+.evaluation-container {
+  width: 600px;
+  max-height: 270px;
+  margin-top: 60px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+.evaluation-container h2 {
+  color: #ea726b;
+  font-size: 26px;
+  font-weight: bold;
+  padding-top: 10px;
+}

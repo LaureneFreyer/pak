@@ -4,17 +4,17 @@ Pet.destroy_all
 User.destroy_all
 
 bob_photo = URI.open("https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80")
-bob = User.new(email: 'bob@test.com', password: 'password', role: 'locataire', first_name: 'Bob', last_name: 'Le Bricoleur')
+bob = User.new(email: 'bob@test.com', password: 'password', role: 'Propriétaire', first_name: 'Bob', last_name: 'Le Bricoleur')
 bob.photo.attach(io: bob_photo, filename: "bob.jpg", content_type: "images/png")
 bob.save!
 
 dora_photo = URI.open("https://images.unsplash.com/photo-1484863137850-59afcfe05386?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80")
-dora = User.new(email: 'dora@test.com', password: 'password', role: 'propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
+dora = User.new(email: 'dora@test.com', password: 'password', role: 'Propriétaire', first_name: 'Dora', last_name: "L'Exploratrice")
 dora.photo.attach(io: dora_photo, filename: "dora.jpg", content_type: "images/png")
 dora.save!
 
 cyrille_photo = URI.open("https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80")
-cyrille = User.new(email: 'cyrille.varin@live.fr', password: 'holahola', role: 'propriétaire', first_name: 'Cyrille', last_name: "Varin" )
+cyrille = User.new(email: 'cyrille.varin@live.fr', password: 'holahola', role: 'Propriétaire', first_name: 'Cyrille', last_name: "Varin" )
 cyrille.photo.attach(io: cyrille_photo, filename: "cyrille.jpg", content_type: "images/png")
 cyrille.save!
 

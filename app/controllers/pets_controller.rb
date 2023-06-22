@@ -3,6 +3,19 @@ class PetsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+    if params[:query].present?
+      sql_query = <<~SQL
+        pets.name ILIKE :query
+        OR pets.species ILIKE :query
+        OR pets.address ILIKE :query
+        OR users.first_name ILIKE :query
+      SQL
+      @pets = Pet.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @pets = Pet.all
+    end
+    params[:query] = nil
+
     @pets = Pet.all
     @markers = @pets.geocoded.map do |pet|
       {
