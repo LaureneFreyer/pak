@@ -1,3 +1,4 @@
+<div class ="index-body">
     <h1 class="page-title">Liste de tous nos animaux :</h1>
     <div id="category-filter" data-controller="category" class="text-center">
       <button class="category-button" data-category="all" data-action="click->category#filterByCategory" data-target="category.categoryButton">Tous</button>
@@ -10,8 +11,9 @@
       <button class="slach">|</button>
       <button class="category-button" data-category="autres" data-action="click->category#filterByCategory" data-target="category.categoryButton">Autres</button>
     </div>
+
 <div class="page-container">
-  <div class="card-container">
+  <div class="cards-container">
 
     <div id="suggestions">
       <div class="card-container">
@@ -25,4 +27,5 @@
   <div class="map-container">
     <div id="map" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
+</div>
 </div>
