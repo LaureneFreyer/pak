@@ -1,15 +1,16 @@
-<div id="pet-details">
+<div id="pet-container">
   <div class="pet-card">
     <div id="<%= dom_id @pet %>">
       <img class="pet-photo" src="<%= @pet.photo.attached? ? cl_image_path(@pet.photo.key) : '#' %>" alt="<%= @pet.name %>">
-      <h1 class="pet-name"><%= @pet.name %></h1>
-      <div class="pet-attributes">
-        <p>"<%= @pet.content %>"</p>
-        <p><%= @pet.species %></p>
-        <p><i class="fa-solid fa-location-dot"></i> <%= @pet.address %></p>
-        <p><i class="fa-solid fa-paw"></i> <%= @pet.rating %></p>
-        <p><i class="fa-solid fa-euro-sign"></i> <%= @pet.price %>€ la journée</p>
-      </div>
+            <div class="pet-attributes">
+              <div class="pet-title-box">
+              <h1 class="pet-name"><%= @pet.name %></h1> <span><%= @pet.rating %><i class="fa-solid fa-paw"></i></span>
+              </div>
+              <p><%= @pet.species %></p>
+              <p>"<%= @pet.content %>"</p>
+              <p><i class="fa-solid fa-location-dot"></i> <%= @pet.address %></p>
+              <p><i class="fa-solid fa-euro-sign"></i> <%= @pet.price %>€ la journée</p>
+            </div>
     </div>
   </div>
 
