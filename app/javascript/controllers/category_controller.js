@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     this.showAllPets()
-    console.log("Hello, la categorie marche!", this.element)
+    // console.log("Hello, la categorie marche!", this.element)
   }
 
   showAllPets() {

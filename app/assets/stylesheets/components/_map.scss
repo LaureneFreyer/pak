@@ -1,0 +1,67 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+}
+
+.page-container {
+  display: flex;
+}
+
+.card-container {
+  flex-grow: 1;
+  margin-right: 20px; /* Marge à droite pour séparer les cartes de la carte */
+}
+
+.map-container {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 500px; /* Largeur maximale de la carte */
+  margin-right: 20px; /* Ecart à droite de la carte */
+  margin-top: 60px; /* Ecart vers le bas de la carte */
+}
+
+#map {
+  height: 600px;
+  position: sticky;
+  top: 50px; /* Ajustez la valeur en fonction de la position souhaitée */
+}
+
+.popup-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.popup-content {
+  font-family: "Open Sans", sans-serif;
+}
+
+.popup-content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.popup-address {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.popup-price {
+  font-size: 16px;
+  color: #ea726b;
+  margin: 0;
+}
