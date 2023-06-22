@@ -1,4 +1,3 @@
-
 <div class="login-form-container">
   <h2>Ajouter un animal de compagnie</h2>
 
@@ -7,7 +6,7 @@
 
     <div class="form-inputs">
       <%= f.input :name, label: "Nom", required: true, autofocus: true, input_html: { class: 'form-control' } %>
-      <%= f.input :address, label: "Adresse", required: true, input_html: { class: 'form-control' } %>
+      <%= f.input :address, label: "Adresse", required: true, input_html: { class: 'form-control', id: 'pet_address' } %>
       <%= f.input :price, label: "Prix journalier (€)", required: true, input_html: { class: 'form-control' } %>
       <%= f.input :content, label: "Description", required: true, input_html: { class: 'form-control' } %>
       <%= f.input :photo, label: "Photo", input_html: { class: 'form-control' } %>

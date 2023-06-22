@@ -25,5 +25,8 @@ application.register("hello", HelloController)
 import IconNavbarController from "./icon_navbar_controller"
 application.register("icon-navbar", IconNavbarController)
 
+import MapController from "./map_controller"
+application.register("map", MapController)
+
 import ScrollController from "./scroll_controller"
 application.register("scroll", ScrollController)
