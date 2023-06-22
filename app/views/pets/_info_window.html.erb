@@ -1,0 +1,10 @@
+<div class="popup-container">
+  <div class="popup-image">
+    <%= cl_image_tag pet.photo.key, alt: pet.name %>
+  </div>
+  <div class="popup-content">
+    <h2><%= pet.name %></h2>
+    <p class="popup-address"><i class="fa-solid fa-location-dot"></i> <%= pet.address %></p>
+    <p class="popup-price"><%= pet.price %> €/j</p>
+  </div>
+</div>
