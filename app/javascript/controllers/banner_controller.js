@@ -12,6 +12,7 @@ export default class extends Controller {
       myCard.classList.remove('blur');
     };
 
+
     document.addEventListener('click', (e) => {
       const targetElement = e.target;
       if (targetElement.tagName.toLowerCase() === 'img' && targetElement.parentNode.classList.contains('card-banner')) {
