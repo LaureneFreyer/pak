@@ -9,12 +9,15 @@
 }
 
 .card-trip {
-  margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }
 
 .card {
+  border: none;
+  background-color: white;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   text-align: center;
   display: flex;
@@ -52,7 +55,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+
 }
 
 .card.card-link p {
@@ -88,7 +91,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+
 }
 
 .card-trip-infos h3 {
