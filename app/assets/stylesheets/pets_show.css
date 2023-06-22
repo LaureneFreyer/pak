@@ -1,85 +1,113 @@
-#pet-details {
+#pet-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   min-height: calc(100vh - 80px - 80px);
   padding-top: 50px;
   padding-bottom: 80px;
   color: #ea726b;
 }
 
+/* ------------------------------------------------------------- */
+/* ------------------------css box show------------------------- */
+/* ------------------------------------------------------------- */
+
 .pet-card {
-  max-width: 45%;
-  min-height: 340px;
-  border: 1px solid #ddd;
+  background-color: white;
+  width: 1050px;
+  height: 600px;
   border-radius: 4px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  padding: 20px;
-  overflow: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-right: 20px;
   margin-bottom: 20px;
   margin-left: 20%; /* Ajout de la marge à gauche */
 }
 
-.reservation-wrapper {
-  max-width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Alignement à gauche */
-  margin-bottom: 20px;
-  margin-right: 10%; /* Ajout de la marge à droite */
-}
-
-.form-card {
-  min-height: 300px;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  padding: 20px;
-  overflow: auto;
-  margin-bottom: 20px;
-  padding-right: 20px; /* Ajout de l'espace à droite */
-}
-
-
+/* ------------------------css photo------------------------- */
 
 .pet-photo {
-  width: 80%;
+  float: left;
+  height: 600px;
+  width: 600px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
   object-fit: cover;
-  border-radius: 8%;
-  transition: transform 0.3s ease-in-out; /* Ajout de la transition */
 }
 
-.pet-photo:hover {
-  transform: scale(1.05); /* Zoom légèrement sur le survol */
+
+/* ------------------------css content------------------------- */
+
+.pet-attributes{
+  text-align: center;
+  padding-top: 5px;
+}
+
+.pet-title-box {
+  font-weight: bold;
+  color: #ea726b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
 }
 
 .pet-name {
-  border-bottom: 1px solid #ddd;
   font-size: 24px;
-  font-weight: bold;
-  margin: 10px;
-  padding-bottom: 10px;
 }
 
 .pet-attributes i {
   color: #ea726b;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .pet-attributes p {
   padding: 10px;
   color: black;
 }
+
+/* ------------------------------------------------------------- */
+/* ------------------------css box résa------------------------- */
+/* ------------------------------------------------------------- */
+
+
+.reservation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alignement à gauche */
+  margin-bottom: 20px;
+}
+
+.form-card {
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: auto;
+  margin-bottom: 20px;
+  padding-right: 20px; /* Ajout de l'espace à droite */
+}
+
+/* ------------------------css btn resa------------------------- */
+
+
+.reservation-button {
+  background-color: #ea726b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.reservation-button:hover {
+  background-color: #d85f58;
+}
+
+/* ------------------------css btn return------------------------- */
 
 .return-button {
   background-color: #ea726b;
@@ -96,20 +124,5 @@
 }
 
 .return-button:hover {
-  background-color: #d85f58;
-}
-
-.reservation-button {
-  background-color: #ea726b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.reservation-button:hover {
   background-color: #d85f58;
 }
