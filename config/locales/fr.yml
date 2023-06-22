@@ -1,4 +1,13 @@
 fr:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "La validation a échoué : %{errors}"
+      models:
+        reservation:
+          attributes:
+            end_date:
+              blank: "ne peux pas être vide"
   date:
     order:
       - :day
