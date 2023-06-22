@@ -1,6 +1,6 @@
 .login-form-container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -67,6 +67,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   text-align: center;
+  background-color: white;
 }
 .profil-container h2 {
   color: #ea726b;
@@ -74,8 +75,9 @@
   font-weight: bold;
   padding-top: 10px;
 }
-.profil-page {
-  padding: 60px;
+.profil-evaluation-container {
+  padding-top: 80px;
+  padding-left: 150px;
 }
 .infos-pets-user {
   padding-top: 35px;
@@ -98,10 +100,17 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   text-align: center;
+  background-color: white;
 }
 .evaluation-container h2 {
   color: #ea726b;
   font-size: 26px;
   font-weight: bold;
   padding-top: 10px;
+}
+.form-inputs input {
+  background-color: white;
+}
+.form-inputs .collection {
+ background-color: white;
 }

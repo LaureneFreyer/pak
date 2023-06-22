@@ -114,3 +114,6 @@
 .nav-item {
   background-color: white;
 }
+.nav-link:hover {
+  background-color: white;
+}
