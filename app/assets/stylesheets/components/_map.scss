@@ -7,28 +7,25 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.page-container {
-  display: flex;
-}
-
-.card-container {
-  flex-grow: 1;
-  margin-right: 20px; /* Marge à droite pour séparer les cartes de la carte */
-}
-
 .map-container {
   flex-shrink: 0;
-  width: 100%;
-  max-width: 500px; /* Largeur maximale de la carte */
-  margin-right: 20px; /* Ecart à droite de la carte */
-  margin-top: 60px; /* Ecart vers le bas de la carte */
+  max-width: 700px; /* Largeur maximale de la div de la carte */
+  min-width: 550px;
+  margin: 20px; /* Ecart à droite de la carte */
 }
 
 #map {
-  height: 600px;
-  position: sticky;
   top: 50px; /* Ajustez la valeur en fonction de la position souhaitée */
 }
+.map-container #map{
+  margin-right: 50px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 750px;
+  position: sticky;
+}
+
+/* popup map */
 
 .popup-container {
   display: flex;

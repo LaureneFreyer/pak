@@ -16,13 +16,10 @@
 
   <div class="reservation-wrapper">
     <div class="form-card">
-      <%= simple_form_for [@pet, @reservation] do |f| %>
-        <div class="dates-input">
-          <%= f.input :start_date, label: 'Date de début', as: :string, input_html: { data: { controller: "datepickr" } } %>
-          <%= f.input :end_date, label: 'Date de fin', as: :string, input_html: { data: { controller: "datepickr" } }  %>
-        </div>
+      <%= simple_form_for [@pet, @reservation], data: { controller: 'datepickr' } do |f| %>
+        <%= f.input :start_date, label: 'Date de début', as: :string, input_html: { data: { datepickr_target: 'startDate' } } %>
+        <%= f.input :end_date, label: 'Date de fin', as: :string, input_html: { data: { datepickr_target: 'endDate' }, id: 'end_date' } %>
         <%= f.submit 'Réserver', class: 'reservation-button' %>
-        </div>
       <% end %>
     </div>
   </div>

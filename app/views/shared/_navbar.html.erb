@@ -23,9 +23,9 @@
 
 
       <% if user_signed_in? %>
-        <%= link_to "Mettre mon animal sur PAK", new_pet_url, class: "nav-link text-center", id:"navhover" %>
+        <%= link_to "Mettre mon animal sur PAK", new_pet_url, class: "nav-link text-center" %>
         <% else %>
-                <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
+                <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center" %>
 
         <% end %>
 

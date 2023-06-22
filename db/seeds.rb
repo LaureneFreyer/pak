@@ -29,7 +29,7 @@ uzor.photo.attach(io: file2, filename: 'hippo.jpg', content_type: 'images/png')
 uzor.save!
 
 file3 = URI.open('https://images.unsplash.com/photo-1539236754983-085fe1449ba4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=718&q=80')
-nemo = Pet.new(user: dora, name: 'Nemo', address: 'Pau', price: 10, content: 'Idéal pour les gens solo.', rating: 4, species: 'Poisson rouge')
+nemo = Pet.new(user: dora, name: 'Nemo', address: 'Pau', price: 10, content: 'Idéal pour les gens solo.', rating: 4, species: 'Poisson')
 nemo.photo.attach(io: file3, filename: 'fish.jpg', content_type: 'images/png')
 nemo.save!
 
@@ -79,41 +79,41 @@ tigrou.photo.attach(io: file12, filename: 'tigrou.jpg', content_type: 'images/pn
 tigrou.save!
 
 file13 = URI.open('https://www.planetesauvage.com/fileadmin/_processed_/a/9/csm_dauphin-bandeau_db916c1aa3.jpg')
-flip = Pet.new(user: cyrille, name: 'Flipper', address: 'Biarritz', price: 299, content: 'Adore faire des ronds dans la mer', rating: 4.9, species: 'Dauphin')
+flip = Pet.new(user: cyrille, name: 'Flipper', address: 'Biarritz', price: 299, content: 'Adore faire des ronds dans la mer.', rating: 5, species: 'Dauphin')
 flip.photo.attach(io: file13, filename: 'dauphin.jpg', content_type: 'images/png')
 flip.save!
 
 file14 = URI.open('https://www.consoglobe.com/wp-content/uploads/2016/12/adopter-tortue-1.jpg')
-marie = Pet.new(user: cyrille, name: 'Marie', address: 'Balma', price: 55, content: 'Sa nourriture préférée? La salade bien sur', rating: 3.9, species: 'Tortue')
+marie = Pet.new(user: cyrille, name: 'Marie', address: 'Balma', price: 55, content: 'Sa nourriture préférée? La salade bien sûr!', rating: 4, species: 'Tortue')
 marie.photo.attach(io: file14, filename: 'tortue.jpg', content_type: 'images/png')
 marie.save!
 
 file15 = URI.open('https://www.woopets.fr/assets/races/000/103/og-image/caniche_2.jpg')
-milou = Pet.new(user: cyrille, name: 'Milou', address: 'Toulouse', price: 25, content: 'Vous le louez, vous le gardez', rating: 0, species: 'Chien')
+milou = Pet.new(user: cyrille, name: 'Milou', address: 'Toulouse', price: 25, content: 'Vous le louez, vous le gardez.', rating: 0, species: 'Chien')
 milou.photo.attach(io: file15, filename: 'milou.jpg', content_type: 'images/png')
 milou.save!
 
 file16 = URI.open('https://www.ipnoze.com/wordpress/wp-content/uploads/2023/05/001_20230501144039.jpg')
-garfiel = Pet.new(user: cyrille, name: 'Garfield', address: 'Nice', price: 8, content: "Le prix de la nourriture n'est pas inclus", rating: 3, species: 'Chat')
+garfiel = Pet.new(user: cyrille, name: 'Garfield', address: 'Nice', price: 8, content: "Le prix de la nourriture n'est pas inclus.", rating: 3, species: 'Chat')
 garfiel.photo.attach(io: file16, filename: 'garfiel.jpg', content_type: 'images/png')
 garfiel.save!
 
 file17 = URI.open('https://thumbs.dreamstime.com/b/tigre-de-bengale-15025599.jpg')
-alfred = Pet.new(user: cyrille, name: 'Alfred', address: 'Paris', price: 899, content: "Sage, mais nécessite une laisse renforcée", rating: 5, species: 'Tigre')
+alfred = Pet.new(user: cyrille, name: 'Alfred', address: 'Paris', price: 899, content: "Sage, mais nécessite une laisse renforcée.", rating: 5, species: 'Tigre')
 alfred.photo.attach(io: file17, filename: 'alfred.jpg', content_type: 'images/png')
 alfred.save!
 
 file18 = URI.open('https://upload.chatsdumonde.com/img_global/24-cousins-du-chat/_light-14123-panthere-noire.jpg')
-bagera = Pet.new(user: cyrille, name: 'Bagheera', address: 'Bali', price: 2899, content: "Sage, mais nécessite une laisse renforcée", rating: 5, species: 'Panthere')
+bagera = Pet.new(user: cyrille, name: 'Bagheera', address: 'Bali', price: 2899, content: "Sage, mais nécessite une laisse renforcée.", rating: 5, species: 'Panthère')
 bagera.photo.attach(io: file18, filename: 'bagheera.jpg', content_type: 'images/png')
 bagera.save!
 
 file19 = URI.open('https://www.autourdesanimaux.com/wp-content/uploads/blobfish-2-300x300.jpeg')
-boby = Pet.new(user: cyrille, name: 'Boby', address: 'Brest', price: 278, content: "C'est un poisson? Essayer le", rating: 2, species: 'Poisson')
+boby = Pet.new(user: cyrille, name: 'Boby', address: 'Brest', price: 278, content: "C'est un poisson? Essayez le.", rating: 2, species: 'Poisson')
 boby.photo.attach(io: file19, filename: 'boby.jpg', content_type: 'images/png')
 boby.save!
 
 file20 = URI.open('https://jardinage.lemonde.fr/images/dossiers/2019-09/perroquet-ara-133925.jpg')
-jacob = Pet.new(user: cyrille, name: 'Jacob', address: 'Cannes', price: 198, content: "Jacooooooob!", rating: 5, species: 'Perroquet')
+jacob = Pet.new(user: cyrille, name: 'Jacob', address: 'Cannes', price: 198, content: "Jacooooooob!", rating: 5, species: 'Oiseau')
 jacob.photo.attach(io: file20, filename: 'jacob.jpg', content_type: 'images/png')
 jacob.save!
