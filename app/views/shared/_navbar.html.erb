@@ -28,9 +28,14 @@
                 <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
 
         <% end %>
-<%= link_to pets_path do %>
-  <i class="fa-solid fa-paw icon-navbar" style="color: #ea726b;"></i>
-<% end %>      <ul class="navbar-nav" id="usernav">
+        <%= link_to pets_path do %>
+                <span class="popup" data-popuptext="Les animaux">
+
+        <i class="fa-solid fa-paw icon-navbar" style="color: #ea726b;"></i>
+                </span>
+
+        <% end %>
+          <ul class="navbar-nav" id="usernav">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
