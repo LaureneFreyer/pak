@@ -1,0 +1,26 @@
+span.popup {
+  height: 0;
+  color: #ea726b;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: attr(data-popuptext);
+    background: transparent;
+    border-radius: 3px;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 500ms ease;
+    white-space: nowrap;
+    max-height: 0;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    top: 1.2em;
+    max-height: 200px;
+    padding: .4em;
+  }
+}

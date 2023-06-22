@@ -1,0 +1,28 @@
+    <h1 class="page-title">Les animaux autours de vous:</h1>
+    <div id="category-filter" data-controller="category" class="text-center">
+      <button class="category-button" data-category="all" data-action="click->category#filterByCategory" data-target="category.categoryButton">Tous</button>
+      <button class="slach">|</button>
+      <button class="category-button" data-category="Chien" data-action="click->category#filterByCategory" data-target="category.categoryButton">Chiens</button>
+      <button class="slach">|</button>
+      <button class="category-button" data-category="Chat" data-action="click->category#filterByCategory" data-target="category.categoryButton">Chats</button>
+      <button class="slach">|</button>
+      <button class="category-button" data-category="Oiseau" data-action="click->category#filterByCategory" data-target="category.categoryButton">Oiseaux</button>
+      <button class="slach">|</button>
+      <button class="category-button" data-category="autres" data-action="click->category#filterByCategory" data-target="category.categoryButton">Autres</button>
+    </div>
+<div class="page-container">
+  <div class="card-container">
+
+    <div id="suggestions">
+      <div class="card-container">
+        <% @pets.each do |pet| %>
+          <%= render partial: "shared/pet", locals: { pet: pet } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div id="map" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+</div>
