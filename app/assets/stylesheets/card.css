@@ -150,6 +150,16 @@
   align-items: center;
 }
 
+.slach {
+  border: none;
+  background-color: transparent;
+  color: #ea726b;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .category-button {
   border: none;
   background-color: transparent;
@@ -162,11 +172,11 @@
   margin-right: 10px;
 }
 
-.category-button:not(:last-child)::after {
+/* .category-button:not(:last-child)::after {
   content: "|";
   margin-left: 10px;
   margin-right: 10px;
-}
+} */
 
 .category-button:hover {
   background-color: #d98035;

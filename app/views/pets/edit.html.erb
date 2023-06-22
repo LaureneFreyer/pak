@@ -1,11 +1,20 @@
-<h1>Modifier <%= @pet.name %></h1>
+<div class="login-form-container">
+  <h2>Modifier <%= @pet.name %></h2>
 
-<%= simple_form_for (@pet) do |f|  %>
-  <%= f.input :name, label: 'Prénom' %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :address, label: 'Localisation' %>
-  <%= f.input :content, label: "Description de l'animal" %>
-  <%= f.input :species, label: "Espèce" %>
-  <%= f.input :price, label: 'Prix journalier' %>
-  <%= f.submit 'Modifier' %>
-<% end %>
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name, label: 'Prénom', required: true, autofocus: true, input_html: { class: 'form-control' } %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :address, label: 'Localisation', input_html: { class: 'form-control' } %>
+      <%= f.input :content, label: "Description de l'animal", input_html: { class: 'form-control' } %>
+      <%= f.input :species, label: 'Espèce', input_html: { class: 'form-control' } %>
+      <%= f.input :price, label: 'Prix journalier', input_html: { class: 'form-control' } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, 'Modifier', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

@@ -1,18 +1,22 @@
 <h1 class="page-title">Liste de tous nos animaux :</h1>
 
 <div id="category-filter" data-controller="category" class="text-center">
-  <button class="category-button" data-category="all" data-target="category.categoryButton">Tous</button>
-  <button class="category-button" data-category="chien" data-target="category.categoryButton">Chiens</button>
-  <button class="category-button" data-category="chat" data-target="category.categoryButton">Chats</button>
-  <button class="category-button" data-category="oiseau" data-target="category.categoryButton">Oiseaux</button>
-  <button class="category-button" data-category="autres" data-target="category.categoryButton">Autres</button>
+  <button class="category-button" data-category="all" data-action="click->category#filterByCategory" data-target="category.categoryButton">Tous</button>
+    <button class="slach">|</button>
+  <button class="category-button" data-category="Chien" data-action="click->category#filterByCategory" data-target="category.categoryButton">Chiens</button>
+    <button class="slach">|</button>
+  <button class="category-button" data-category="Chat" data-action="click->category#filterByCategory" data-target="category.categoryButton">Chats</button>
+    <button class="slach">|</button>
+  <button class="category-button" data-category="Oiseau" data-action="click->category#filterByCategory" data-target="category.categoryButton">Oiseaux</button>
+    <button class="slach">|</button>
+  <button class="category-button" data-category="autres" data-action="click->category#filterByCategory" data-target="category.categoryButton">Autres</button>
 </div>
 
 <div id="suggestions">
   <div class="card-container">
     <% @pets.each do |pet| %>
-  <%= render partial: "shared/pet", locals: { pet: pet } %>
-  <% end %>
+      <%= render partial: "shared/pet", locals: { pet: pet } %>
+    <% end %>
   </div>
   <div class="see-more-container">
     <%= link_to "Retour", "/", class: "see-more-button" %></li>
