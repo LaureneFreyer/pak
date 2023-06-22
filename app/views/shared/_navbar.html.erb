@@ -9,12 +9,16 @@
     </button>
 
 <div class="search-form-container">
-  <form class="d-flex">
-    <input class="form-control me-2" type="search" placeholder="Rechercher un animal" aria-label="Search">
-    <button class="btn btn-outline-primary" type="submit">
+    <%= form_with url: pets_path, method: 'get', class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control search",
+      placeholder: "Chercher un animal"
+    %>
+    <%= button_tag( :class => "btn-search") do %>
       <i class="fa-solid fa-magnifying-glass" style="color: #ea726b;"></i>
-    </button>
-  </form>
+    <% end %>
+  <% end %>
 </div>
 
 
@@ -24,12 +28,19 @@
                 <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center", id:"navhover" %>
 
         <% end %>
-<%= link_to pets_path do %>
-  <i class="fa-solid fa-paw icon-navbar" style="color: #ea726b;"></i>
-<% end %>      <ul class="navbar-nav" id="usernav">
+      <div data-controller="icon-navbar">
+      <%= link_to pets_path do %>
+        <i class="fa-solid fa-paw icon-navbar" style="color: #ea726b;" data-action="mouseover->icon-navbar#mouseover" data-icon-navbar-target="icon"></i>
+        <p class="d-none" data-icon-navbar-target="text">voir nos animaux</p>
+      <% end %>
+
+      </div>
+      <ul class="navbar-nav" id="usernav">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="avatar-contour">
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            </div>
             <div class="dropdown-menu dropdown-menu-end rounded-dropdown" aria-labelledby="navbarDropdown">
                 <p>Bonjour <%= current_user.first_name %>!</p>
                 <%= link_to "Mon profil", edit_user_registration_path, class: "nav-link" %>

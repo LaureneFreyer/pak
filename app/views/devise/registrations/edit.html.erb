@@ -1,40 +1,64 @@
-<div class="login-form-container">
-  <h2>Modifier mon compte</h2>
-
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true, input_html: { class: 'form-control' }, label: "Adresse mail" %>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-      <% end %>
-      <%= f.input :first_name, input_html: { class: 'form-control' }, label: "Prénom" %>
-      <%= f.input :last_name, input_html: { class: 'form-control' }, label: "Nom" %>
-      <%= f.input :password,
-                  hint: "Ne rien écrire si vous ne voulez pas changer votre mot de passe",
-                  required: false,
-                  label: "Mot de passe",
-                  input_html: { autocomplete: "new-password", class: 'form-control' } %>
-      <%= f.input :password_confirmation,
-                  required: false,
-                  label: "Confirmation du mot de passe",
-                  input_html: { autocomplete: "new-password", class: 'form-control' } %>
-      <%= f.input :current_password,
-                  hint: "Nous avons besoin de votre mot de passe actuel pour confirmer le changement",
-                  required: true,
-                  label: "Mot de passe actuel",
-                  input_html: { autocomplete: "current-password", class: 'form-control' } %>
+<div class="profil-page d-flex">
+  <div class="profil-evaluation-container">
+    <div class="profil-container">
+      <div class="d-flex justify-content-evenly">
+        <div class="infos-user">
+          <%= cl_image_tag current_user.photo.key, class:"avatar-profil", alt:'avatar' %>
+          <h2><%= current_user.first_name.capitalize %></h2>
+          <p><%= current_user.role %></p>
+        </div>
+        <div class="infos-pets-user text-start">
+          <p><strong class="number-user"><%= current_user.pets.count %></strong> animaux en location <%= link_to user_pets_path(current_user.id) do %><i class="fa-solid fa-cat icon"></i><% end %></p>
+          <p><strong class="number-user">3</strong> évaluations <i class="fa-solid fa-paw icon"></i></p>
+          <p class="last-p"><strong class="number-user"><%= current_user.reservations.count %></strong> réservations en cours <%= link_to user_reservations_path(current_user.id) do %><i class="fa-solid fa-calendar icon"></i><% end %></p>
+        </div>
+      </div>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Modifier", class: 'btn btn-primary' %>
+    <div class="evaluation-container">
+      <h2>Mes évaluations</h2>
+      <br>
     </div>
-  <% end %>
+  </div>
+
+  <div class="login-form-container">
+    <h2>Modifier mon compte</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true, input_html: { class: 'form-control' }, label: "Adresse mail" %>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
+        <%= f.input :first_name, input_html: { class: 'form-control' }, label: "Prénom" %>
+        <%= f.input :last_name, input_html: { class: 'form-control' }, label: "Nom" %>
+        <%= f.input :photo, label: "Photo" %>
+        <%= f.input :password,
+                    hint: "Ne rien écrire si vous ne voulez pas changer votre mot de passe",
+                    required: false,
+                    label: "Mot de passe",
+                    input_html: { autocomplete: "new-password", class: 'form-control' } %>
+        <%= f.input :password_confirmation,
+                    required: false,
+                    label: "Confirmation du mot de passe",
+                    input_html: { autocomplete: "new-password", class: 'form-control' } %>
+        <%= f.input :current_password,
+                    hint: "Nous avons besoin de votre mot de passe actuel pour confirmer le changement",
+                    required: true,
+                    label: "Mot de passe actuel",
+                    input_html: { autocomplete: "current-password", class: 'form-control' } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Modifier", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    <br>
+    <div> <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'btn' %></div>
+
+    <%= link_to "Retour", :back %>
+  </div>
   <br>
-  <div> <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'btn' %></div>
-
-  <%= link_to "Retour", :back %>
 </div>
-<br>

@@ -22,5 +22,8 @@ application.register("footer", FooterController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import IconNavbarController from "./icon_navbar_controller"
+application.register("icon-navbar", IconNavbarController)
+
 import ScrollController from "./scroll_controller"
 application.register("scroll", ScrollController)
