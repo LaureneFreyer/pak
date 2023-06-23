@@ -16,7 +16,7 @@ export default class extends Controller {
     this.fitMapToMarkers()
     this.addGeolocateControl()
 
-    this.detectUserLocation()
+    // this.detectUserLocation()
     this.setupGeolocateButton()
   }
 
@@ -39,7 +39,7 @@ export default class extends Controller {
 
   centerMapToLocation(latitude, longitude) {
     this.map.setCenter([longitude, latitude])
-    this.map.setZoom(12)
+    this.map.setZoom(30)
   }
 
   addUserMarker(latitude, longitude) {

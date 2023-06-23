@@ -20,4 +20,16 @@ Rails.application.routes.draw do
   get '/animaux-autour', to: 'pets#animaux_autour', as: 'animaux_autour'
   post '/animaux-autour', to: 'pets#animaux_autour'
 
+  resources :pets do
+    collection do
+      get :my_requests
+    end
+  end
+
+  resources :reservations, only: [:edit, :update, :destroy] do
+    patch :accept, on: :member
+    patch :reject, on: :member
+  end
+
+  get 'owner_reservations', to: 'reservations#owner_reservations', as: 'owner_reservations'
 end

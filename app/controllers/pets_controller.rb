@@ -69,6 +69,11 @@ class PetsController < ApplicationController
     redirect_to pets_path
   end
 
+  def my_requests
+    @pets = Pet.where(user: current_user)
+    @reservations = Reservation.where(pet: @pets, status: 'pending')
+  end
+
   def animaux_autour
     if params[:latitude].present? && params[:longitude].present?
       @pets = Pet.near([params[:latitude], params[:longitude]], 100)
