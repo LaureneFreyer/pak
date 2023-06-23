@@ -1,10 +1,13 @@
+/* ---------------------------- container home ----------------------------- */
 .card-suggestion {
   justify-content: center;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
 }
+/* ------------------------------------------------------------------------- */
 
+/*----------------------------- container index ---------------------------- */
 .card-container {
   justify-content: center;
   margin: auto;
@@ -13,6 +16,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
 }
+/* ------------------------------------------------------------------------- */
+
+/* ----------------------------responsive media----------------------------- */
 @media(max-width: 2200px){
   .card-container{ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }}
@@ -40,6 +46,8 @@
 @media(max-width: 720px) {
   .card-container{grid-template-columns: 1fr;}
   }
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ cards css ---------------------------------*/
 
 .card-trip {
   margin-right: 20px;
@@ -58,6 +66,8 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  cursor: pointer;
+  text-align: center;
 }
 
 .card:hover {
@@ -71,21 +81,15 @@
   border-top-right-radius: 4px;
 }
 
-.card.card-link {
-  cursor: pointer;
-}
-
-
 .card-trip-infos {
+  font-size: medium;
+  font-weight: bolder;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
-}
-
-.card-trip-infos p {
-  text-decoration: none;
-  font-size: 12px;
-  margin-bottom: 10px;
+  background-color: #f8f5f3;
 }
 
 .card-trip-infos h2 {
@@ -98,7 +102,13 @@
 
 }
 
-.card-trip-infos h3 {
+.card-trip-infos p {
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
   text-decoration: none;
   color: #ea726b;
   font-size: 18px;
@@ -110,7 +120,7 @@
   margin: 0;
   font-size: 24px;
 }
-
+/* ------------------------------ CSS Rating ------------------------------- */
 .card-trip-user {
   bottom: 50%;
   right: 0%;
@@ -127,6 +137,8 @@
   color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
+/* ------------------------------------------------------------------------- */
+
 
 .see-more-container {
   display: flex;

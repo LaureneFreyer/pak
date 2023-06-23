@@ -15,7 +15,7 @@
 
 .pet-card {
   background-color: white;
-  width: 1050px;
+  width: 100%;
   height: 600px;
   border-radius: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -26,13 +26,19 @@
 
 /* ------------------------css photo------------------------- */
 
-.pet-photo {
+.infos-show img {
   float: left;
   height: 600px;
-  width: 600px;
+  width: 100%;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   object-fit: cover;
+  object-position: center;
+}
+  @media (max-width: 600px) {
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -126,7 +132,7 @@
   background-color: #d85f58;
 }
 
-
+/* ---------------------------- map ----------------------- */
 .map-container-show #map{
 width: 240px;
 height: 240px;
