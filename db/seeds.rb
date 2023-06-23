@@ -98,7 +98,7 @@ garfiel = Pet.new(user: cyrille, name: 'Garfield', address: 'Nice', price: 8, co
 garfiel.photo.attach(io: file16, filename: 'garfiel.jpg', content_type: 'images/png')
 garfiel.save!
 
-file17 = URI.open('https://thumbs.dreamstime.com/b/tigre-de-bengale-15025599.jpg')
+file17 = URI.open('https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80')
 alfred = Pet.new(user: cyrille, name: 'Alfred', address: 'Paris', price: 899, content: "Sage, mais nécessite une laisse renforcée.", rating: 5, species: 'Tigre')
 alfred.photo.attach(io: file17, filename: 'alfred.jpg', content_type: 'images/png')
 alfred.save!
@@ -228,6 +228,20 @@ kif = Pet.new(user: cyrille, name: 'Kif', address: 'Carqueiranne', price: 120, c
 kif.photo.attach(io: file42, filename: 'kif.jpg', content_type: 'images/png')
 kif.save!
 
+file43 = URI.open('https://images.unsplash.com/photo-1595854443827-9d1a1ae30f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')
+aria = Pet.new(user: cyrille, name: 'Aria', address: 'Châteillaillon-Plage', price: 85, content: "La deuxième en partant de la gauche.", rating: 3, species: 'Loutre')
+aria.photo.attach(io: file43, filename: 'aria.jpg', content_type: 'images/png')
+aria.save!
+
+file44 = URI.open('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')
+frances = Pet.new(user: dora, name: 'Francès', address: 'Marsilly', price: 22, content: "Adore chasser les insectes et lézards.", rating: 5, species: 'Chat')
+frances.photo.attach(io: file44, filename: 'frances.jpg', content_type: 'images/png')
+frances.save!
+
+file45 = URI.open('https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1092&q=80')
+ary = Pet.new(user: dora, name: 'Ary', address: 'Dompierre-sur-Mer', price: 12, content: "Peut passer des heures à vous regarder dormir.", rating: 4, species: 'Chat')
+ary.photo.attach(io: file45, filename: 'ary.jpg', content_type: 'images/png')
+ary.save!
 
 
 

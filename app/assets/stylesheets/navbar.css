@@ -6,6 +6,7 @@
   right: 0;
   z-index: 9999;
   transition: top 0.3s ease-in-out, position 0.3s ease-in-out;
+  border-bottom: 1px solid #ddd;
 }
 
 .navbar-lewagon.sticky {
@@ -28,13 +29,14 @@
   height: auto;
   transition: width 0.3s ease-in-out;
 }
-
-
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
+}
+.icon-navbar {
+  font-size: 25px;
 }
 .avatar:hover {
   border: 2px solid #ea726b;
@@ -118,4 +120,12 @@
 }
 .nav-link:hover {
   background-color: white;
+}
+.welcome-message {
+  text-align: center;
+}
+.deconnection-message {
+  padding-left: 9px;
+  text-decoration: none;
+  color: black
 }

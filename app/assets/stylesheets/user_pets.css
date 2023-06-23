@@ -3,7 +3,8 @@
   margin: 30px 50px;
 }
 .card-links-user {
-  padding-top: 15px;
+  text-align: center;
+  padding-top: 35px;
   padding-bottom: 5px;
 }
 .card-links-user .link-user {
@@ -35,4 +36,14 @@
 }
 .card-trip-user i {
   padding-left: 2px;
+}
+.infos-pets {
+  justify-content: center;
+}
+.card-trip-infos-user-pets {
+  text-align: center;
+}
+.card-trip-pricing-user {
+  font-size: 18px;
+  font-weight: bold;
 }
