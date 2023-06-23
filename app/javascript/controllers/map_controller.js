@@ -15,7 +15,6 @@ export default class extends Controller {
     this.addMarkersToMap()
     this.fitMapToMarkers()
     this.addGeolocateControl()
-    console.log("Hello, map!", this.element)
 
     this.detectUserLocation()
     this.setupGeolocateButton()
