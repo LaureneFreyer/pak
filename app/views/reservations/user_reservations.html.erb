@@ -1,8 +1,9 @@
 <h1 id="reservations-title">Mes réservations</h1>
 
+
 <div class="all-reservations justify-content-center">
   <% @reservations.each do |reservation| %>
-      <div class="reservation-container" onclick="window.location.href='<%= pet_path(reservation.pet) %>'">
+      <div class="reservation-container">
         <%= cl_image_tag(reservation.pet.photo.key, class:'photo-reservation') %>
         <div class="reservations-infos">
           <div class="reservations-options d-flex justify-content-end">
@@ -14,7 +15,7 @@
             <% end %>
           </div>
           <div class="name">
-            <h2 class= 'link-pet-name'><%= reservation.pet.name %></h2>
+            <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class:'link-pet-name'%></h2>
           </div>
           <div class="dates">
             <p>du <%=  I18n.l(reservation.start_date, format: "%d %b %Y") %> au <%= I18n.l(reservation.end_date, format: "%d %b %Y") %></p>
@@ -25,4 +26,5 @@
         </div>
       </div>
     <% end %>
+</div>
 </div>
