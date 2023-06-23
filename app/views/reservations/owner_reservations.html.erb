@@ -1,19 +1,26 @@
 <h1>Mes demandes de réservation</h1>
 
-<div class="reservation-container">
+<div class="booking-container">
   <% @reservations.each do |reservation| %>
-    <div class="reservation-item">
-      <h2><%= link_to reservation.pet.name, pet_path(reservation.pet) %></h2>
-      <p>Dates: <%= reservation.start_date %> - <%= reservation.end_date %></p>
-      <p>Status: <%= reservation.status %></p>
-  <% if reservation.status == 'pending' %>
-    <%= link_to 'Accepter', accept_reservation_path(reservation), method: :patch %>
-    <%= link_to 'Refuser', reject_reservation_path(reservation), method: :patch %>
-  <% elsif reservation.status == 'accepted' %>
-    <p>Statut : Acceptée</p>
-  <% elsif reservation.status == 'rejected' %>
-    <p>Statut : Refusée</p>
-  <% end %>
-</div>    </div>
+    <div class="card-booking">
+      <%= cl_image_tag reservation.pet.photo.key, width: 100, height: 150 %>
+      <div class="booking-details">
+        <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class: 'link-pet-name' %></h2>
+        <h3 class="booking-pricing"><%= reservation.pet.price %>€</h3>
+        <div class="rating">
+          <%= reservation.pet.rating %><i class="fa-solid fa-paw"></i>
+        </div>
+        <p>Dates: <%= reservation.start_date %> - <%= reservation.end_date %></p>
+        <p>Status: <%= reservation.status %></p>
+        <% if reservation.status == 'pending' %>
+          <%= link_to 'Accepter', accept_reservation_path(reservation), method: :patch, class: 'link-booking' %>
+          <%= link_to 'Refuser', reject_reservation_path(reservation), method: :patch, class: 'link-booking' %>
+        <% elsif reservation.status == 'accepted' %>
+          <p>Statut : Acceptée</p>
+        <% elsif reservation.status == 'rejected' %>
+          <p>Statut : Refusée</p>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>
