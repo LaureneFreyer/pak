@@ -8,15 +8,11 @@
           <p><%= current_user.role %></p>
         </div>
         <div class="infos-pets-user text-start">
-          <p><strong class="number-user"><%= current_user.pets.count %></strong> animaux en location <%= link_to user_pets_path(current_user.id) do %><i class="fa-solid fa-cat icon"></i><% end %></p>
-          <p><strong class="number-user">3</strong> évaluations <i class="fa-solid fa-paw icon"></i></p>
-          <p class="last-p"><strong class="number-user"><%= current_user.reservations.count %></strong> réservations en cours <%= link_to user_reservations_path(current_user.id) do %><i class="fa-solid fa-calendar icon"></i><% end %></p>
+          <p><strong class="number-user"><%= current_user.pets.count %></strong> animaux en location <%= link_to user_pets_path(current_user.id) do %><i class="fa-solid fa-cat icon-profil"></i><% end %></p>
+          <p><strong class="number-user">2</strong> évaluations <i class="fa-solid fa-paw icon-profil"></i></p>
+          <p class="last-p"><strong class="number-user"><%= current_user.reservations.count %></strong> réservations en cours <%= link_to user_reservations_path(current_user.id) do %><i class="fa-solid fa-calendar icon-profil"></i><% end %></p>
         </div>
       </div>
-    </div>
-    <div class="evaluation-container">
-      <h2>Mes évaluations</h2>
-      <br>
     </div>
   </div>
 

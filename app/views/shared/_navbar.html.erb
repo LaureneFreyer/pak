@@ -12,11 +12,11 @@
     <%= form_with url: pets_path, method: 'get', class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "input-search",
       placeholder: "Chercher un animal"
     %>
     <%= button_tag( :class => "btn-search") do %>
-      <i class="fa-solid fa-magnifying-glass" style="color: #ea726b;"></i>
+      <i class="fa-solid fa-magnifying-glass search-icon" style="color: #ea726b;"></i>
     <% end %>
   <% end %>
 </div>
