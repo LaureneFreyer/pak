@@ -1,0 +1,19 @@
+<h1>Mes demandes de réservation</h1>
+
+<div class="reservation-container">
+  <% @reservations.each do |reservation| %>
+    <div class="reservation-item">
+      <h2><%= link_to reservation.pet.name, pet_path(reservation.pet) %></h2>
+      <p>Dates: <%= reservation.start_date %> - <%= reservation.end_date %></p>
+      <p>Status: <%= reservation.status %></p>
+  <% if reservation.status == 'pending' %>
+    <%= link_to 'Accepter', accept_reservation_path(reservation), method: :patch %>
+    <%= link_to 'Refuser', reject_reservation_path(reservation), method: :patch %>
+  <% elsif reservation.status == 'accepted' %>
+    <p>Statut : Acceptée</p>
+  <% elsif reservation.status == 'rejected' %>
+    <p>Statut : Refusée</p>
+  <% end %>
+</div>    </div>
+  <% end %>
+</div>

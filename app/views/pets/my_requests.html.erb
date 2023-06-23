@@ -1,0 +1,22 @@
+<h1>Mes demandes</h1>
+
+<% @reservations.each do |reservation| %>
+  <div class="request-container">
+    <div class="request-infos">
+      <h2><%= link_to reservation.pet.name, pet_path(reservation.pet), class:'link-pet-name' %></h2>
+      <p>du <%= I18n.l(reservation.start_date, format: "%d %b %Y") %> au <%= I18n.l(reservation.end_date, format: "%d %b %Y") %></p>
+      <p><i class="fa-solid fa-location-dot"></i> <%= reservation.pet.address %></p>
+      <p>Status: <%= reservation.status %></p>
+
+      <%= form_with url: reservation_path(reservation), method: :patch, local: true do |f| %>
+        <%= f.hidden_field :status, value: 'approved' %>
+        <%= f.submit 'Approuver', class: 'approve-button' %>
+      <% end %>
+
+      <%= form_with url: reservation_path(reservation), method: :patch, local: true do |f| %>
+        <%= f.hidden_field :status, value: 'denied' %>
+        <%= f.submit 'Refuser', class: 'deny-button' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
