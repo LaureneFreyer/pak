@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     this.showAllPets()
-    // console.log("Hello, la categorie marche!", this.element)
+    console.log("Hello, la categorie marche!", this.element)
   }
 
   showAllPets() {
@@ -17,17 +17,32 @@ export default class extends Controller {
   }
 
   filterByCategory(event) {
-    const selectedCategory = event.target.dataset.category
-    const petCards = Array.from(document.querySelectorAll(".card-trip"))
+    const selectedCategory = event.target.dataset.category;
+    const petCards = Array.from(document.querySelectorAll(".card-trip"));
+
+    const mainSpecies = ['Chien', 'Chat', 'Oiseau'];
+
+    console.log(`Selected Category: ${selectedCategory}`);
 
     petCards.forEach(card => {
-      const category = card.dataset.category
+      if (card.dataset.category) {
+        const species = card.dataset.category;
+        console.log(`Pet Species: ${species}`);
 
-      if (selectedCategory === "all" || category === selectedCategory) {
-        card.style.display = "block"
+        if (selectedCategory === "all") {
+          card.style.display = "block";
+        } else if (selectedCategory === "Autres" && mainSpecies.includes(species)) {
+          card.style.display = "none";
+        } else if (selectedCategory === "Autres" && !mainSpecies.includes(species)) {
+          card.style.display = "block";
+        } else if (species === selectedCategory) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
       } else {
-        card.style.display = "none"
+        console.error(`No category data for card: ${card}`);
       }
-    })
+    });
   }
 }
