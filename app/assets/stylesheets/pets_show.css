@@ -1,11 +1,12 @@
 .index-body{
   justify-content: space-between;
 }
-#pet-container {
+.pet-container {
   display: flex;
   min-height: calc(100vh - 80px - 80px);
   padding-top: 50px;
   padding-bottom: 80px;
+  margin-left: -150px;
   color: #ea726b;
 }
 
@@ -26,7 +27,7 @@
 
 /* ------------------------css photo------------------------- */
 
-.infos-show img {
+.pet-photo {
   float: left;
   height: 600px;
   width: 100%;
@@ -36,7 +37,7 @@
   object-position: center;
 }
   @media (max-width: 600px) {
-    img {
+.pet-photo {
         width: 100%;
     }
 }
@@ -44,12 +45,17 @@
 
 /* ------------------------css content------------------------- */
 
+.infos-show{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .pet-attributes{
-  text-align: center;
   padding-top: 5px;
 }
 
 .pet-title-box {
+  text-align: center;
   font-weight: bold;
   color: #ea726b;
   padding-top: 5px;
@@ -63,7 +69,7 @@
 
 .pet-attributes i {
   color: #ea726b;
-  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .pet-attributes p {
