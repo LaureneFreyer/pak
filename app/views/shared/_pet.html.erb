@@ -5,13 +5,13 @@
       <div class="card-trip-user">
         <%= pet.rating %><i class="fa-solid fa-paw" style="color: white;"></i>
       </div>
-      
-      <div class="card-trip-infos">
+
           <h2><%= link_to pet.name, pet_path(pet), class:'link-pet-name' %></h2>
+          <h3 class="card-trip-pricing"><%= pet.price %>€</h3>
+      <div class="card-trip-infos">
           <p><%= pet.species %></p>
           <div class="city">
           <p><i class="fa-solid fa-location-dot"></i> <%= pet.address %></p>
-          <h3 class="card-trip-pricing"><%= pet.price %>€</h3>
           </div>
       </div>
     </div>
