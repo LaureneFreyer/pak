@@ -52,9 +52,7 @@
   border: none;
   background-color: white;
   font-family: "Work Sans", "Helvetica", "sans-serif";
-  text-align: center;
   display: flex;
-  align-items: center;
   width: 220px;
   height: 320px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -77,32 +75,6 @@
   cursor: pointer;
 }
 
-.card.card-link:hover {
-  transform: scale(1.05, 1.05);
-}
-
-.card.card-link h2 a {
-  text-decoration: none;
-  color: #ea726b;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-
-}
-
-.card.card-link p {
-  text-decoration: none;
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.card.card-link h3 {
-  text-decoration: none;
-  color: #ea726b;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 
 .card-trip-infos {
   display: flex;
