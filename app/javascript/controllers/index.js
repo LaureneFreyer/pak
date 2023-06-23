@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import AnimauxAutourController from "./animaux_autour_controller"
-application.register("animaux-autour", AnimauxAutourController)
-
 import AddressAutocompleteController from "./address_autocomplete_controller"
 application.register("address-autocomplete", AddressAutocompleteController)
 
