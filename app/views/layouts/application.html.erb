@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pets and Kibbles</title>
+    <title> LouerUnAnimal.Com: Pets and Kibbles</title>
     <link rel="pac-small" type= 'image/png' href="../../assets/images/PAC-small.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta
+      name="description"
+      content="Le airbnb des animaux de compagnie et sauvages. Un large choix d'animaux à louer pour une journée ou plus. Animation de soirée, shooting photo, cinéma, ..."
+    />
+        <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,6 +33,9 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <%= favicon_link_tag %>
+
   </head>
 
   <body >

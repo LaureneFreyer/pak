@@ -23,7 +23,8 @@
           <%= f.input :start_date, label: 'Date de début', as: :string, input_html: { data: { controller: "datepickr" } } %>
           <%= f.input :end_date, label: 'Date de fin', as: :string, input_html: { data: { controller: "datepickr" } } %>
         </div>
-        <%= f.submit 'Réserver', class: 'reservation-button' %>
+        <%# <%= f.submit 'Réserver', class: 'reservation-button' %>
+        <%= link_to 'Réserver', animal_cause_path, class: 'reservation-button' %>
       <% end %>
       <div class="map-container-show">
         <div id="map" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

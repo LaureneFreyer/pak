@@ -1,0 +1,96 @@
+.animal-awareness-title, .animal-awareness-subtitle {
+  color: #ea726b;
+  text-align: center;
+}
+
+.animal-awareness-text {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.animal-awareness-subtitle {
+  margin-top: 30px;
+}
+
+.animal-awareness-container {
+  max-width: 800px;
+  margin: 20px auto; /* 20px de marge en haut et en bas, centrage automatique sur les côtés */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+
+.animal-awareness-link {
+  color: #ea726b;
+  text-decoration: none;
+}
+
+.animal-awareness-link:hover {
+  color: #c0564e;
+}
+
+.animal-awareness-statistic {
+  font-weight: bold;
+  color: #ea726b;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* .animal-awareness-statistic:hover {
+  font-size: 1.1em;
+} */
+
+
+.animal-awareness-links a {
+  color: #ea726b;
+  text-decoration: none;
+}
+
+.animal-awareness-links a:hover {
+  text-decoration: underline;
+}
+
+.animal-awareness-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+
+
+.animal-awareness-logo {
+  width: 50px;
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.side-image {
+  width: 200px;  /* ajustez la taille de l'image comme vous voulez */
+  height: auto;
+  border-radius: 30px;
+  margin: 25px 50px;; /* ajoute un peu d'espace autour de chaque image */
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition douce */
+}
+
+.side-image:hover {
+  transform: scale(1.1); /* Augmente la taille de l'image de 10% lorsqu'elle est survolée */
+}
+
+.left-images,
+.right-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
