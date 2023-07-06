@@ -32,4 +32,5 @@ Rails.application.routes.draw do
   end
 
   get 'owner_reservations', to: 'reservations#owner_reservations', as: 'owner_reservations'
+  get 'animal_cause', to: 'pages#animal_cause'
 end

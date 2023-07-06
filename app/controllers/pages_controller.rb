@@ -20,4 +20,8 @@ class PagesController < ApplicationController
   def company_info
   end
 
+  def animal_cause
+    # Votre logique métier ici si nécessaire
+  end
+
 end

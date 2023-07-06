@@ -153,3 +153,16 @@
   text-decoration: none;
   color: black
 }
+
+.arrondi {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box; /* Ajout de cette ligne */
+  padding: 7px; /* Ajout d'un padding pour créer de l'espace autour du texte */
+  transition: border-radius 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Déplacement de la transition ici */
+}
+
+.arrondi:hover {
+  border-radius: 18px;
+  background-color: #f1f1f1a7;
+}

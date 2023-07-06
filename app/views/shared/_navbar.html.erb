@@ -23,9 +23,9 @@
 
 
       <% if user_signed_in? %>
-        <%= link_to "Mettre mon animal sur PAK", new_pet_url, class: "nav-link text-center" %>
+        <%= link_to " Mettre mon animal sur PAK ", new_pet_url, class: "arrondi" %>
         <% else %>
-                <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "nav-link text-center" %>
+                <%= link_to "Mettre mon animal sur PAK", new_user_session_path, class: "arrondi" %>
 
         <% end %>
 
@@ -34,7 +34,7 @@
         <i class="fa-solid fa-paw icon-navbar" style="color: #ea726b;"></i>
                 </span>
         <% end %>
-        <%= link_to animaux_autour_path do %>
+        <%= link_to animal_cause_path do %>
                 <span class="popup" id="geolocate-button" data-popuptext="Près de moi">
         <i class="fa-solid fa-earth-americas icon-navbar" style="color: #ea726b;"></i>
                 </span>
